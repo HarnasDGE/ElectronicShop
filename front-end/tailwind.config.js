@@ -13,7 +13,8 @@ module.exports = {
         backgroundPrimary: "#fff",
         backgroundSecondary: "#DDE8E3",
         mainText: "#fff",
-        secondText: "#000",
+        secondText: "#161616",
+        menuText: "#2C2C2C",
 
         selectedCategory: "#D9D9D9",
         borderCategory: "#D9D9D9",
