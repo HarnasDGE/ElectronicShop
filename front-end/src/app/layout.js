@@ -1,3 +1,4 @@
+import { MainBar } from "./components/MainBar";
 import { TopBar } from "./components/TopBar";
 import "./globals.css";
 import { Outfit } from "next/font/google";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${outfit.className}`}>
         <TopBar />
+        <MainBar />
         {children}
       </body>
     </html>

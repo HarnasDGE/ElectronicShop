@@ -19,6 +19,7 @@ module.exports = {
         selectedCategory: "#D9D9D9",
         borderCategory: "#D9D9D9",
         backgroundCategory: "#EFEFEF",
+        searchBackground: "#f4f4f4",
 
         hoveredProdcutPrimary: "#F6f6f6",
         hoveredProdcutSecondary: "#C8E7F4",
