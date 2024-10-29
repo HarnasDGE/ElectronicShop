@@ -16,6 +16,8 @@ module.exports = {
         secondText: "#161616",
         menuText: "#2C2C2C",
 
+        heroBackground: "#8CB1A0",
+
         selectedCategory: "#D9D9D9",
         borderCategory: "#D9D9D9",
         backgroundCategory: "#EFEFEF",
@@ -69,6 +71,19 @@ module.exports = {
 
         backgroundFooter: "#EFEFEF",
         dividerFooter: "#CFCFCF",
+      },
+      fontSize: {
+        xs: "10px",
+        sm: "14px",
+        base: "16px",
+        xl: "20px",
+        "2xl": "27px",
+        "3xl": "30px",
+        "4xl": "35px",
+        "5xl": "50px",
+      },
+      backgroundImage: {
+        heroGradient: "linear-gradient(90deg, #000, transparent 70%)",
       },
     },
   },

@@ -14,3 +14,11 @@
 ul {
   list-style-type: none;
 }
+
+h1 {
+  @apply text-5xl font-extrabold;
+}
+
+h2 {
+  @apply text-2xl;
+}

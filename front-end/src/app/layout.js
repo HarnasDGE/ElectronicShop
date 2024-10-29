@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <TopBar />
         <MainBar />
         <ThirdBar />
+
         {children}
       </body>
     </html>
