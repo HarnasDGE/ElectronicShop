@@ -1,0 +1,9 @@
+<svg className="fill-current" width="28" height="28" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 7">
+<g id="Group">
+<path id="Vector" d="M7.67038 8.36346C8.99634 8.36346 10.0712 7.29921 10.0712 5.98638C10.0712 4.67355 8.99634 3.6093 7.67038 3.6093C6.34443 3.6093 5.26953 4.67355 5.26953 5.98638C5.26953 7.29921 6.34443 8.36346 7.67038 8.36346Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M10.8591 13.1348V11.5208C10.8591 9.77699 9.43127 8.36327 7.67005 8.36327C5.90882 8.36327 4.48096 9.77699 4.48096 11.5208V13.1348" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_3" d="M7.6774 13.9687C11.3652 13.9687 14.3548 11.0087 14.3548 7.35739C14.3548 3.70607 11.3652 0.746094 7.6774 0.746094C3.98958 0.746094 1 3.70607 1 7.35739C1 11.0087 3.98958 13.9687 7.6774 13.9687Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -1,3 +1,4 @@
+"use client";
 import HeartIcon from "../assets/icons/heart.svg";
 
 export const WishListButton = ({ className }) => {
@@ -12,7 +13,7 @@ export const WishListButton = ({ className }) => {
           {wishListLength}
         </div>
       </div>
-      <p className="group-hover:text-secondary">WishList</p>
+      <p className="group-hover:text-secondary hidden xl:block">WishList</p>
     </button>
   );
 };
