@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: "#FED700",
         secondary: "#0068C8",
+        background: "#fff",
         backgroundPrimary: "#fff",
         backgroundSecondary: "#DDE8E3",
         mainText: "#fff",
@@ -42,6 +43,9 @@ module.exports = {
         procentOff: "#CC0C39",
         backgroundProductPrimary: "#F5F5F5",
 
+        gray: "rgba(0, 45, 88, 0.20)",
+
+        trendingCategories: "#EFEFEF",
         buttonPrimary: "#FED700",
         buttonSecondary: "#1A80E0",
         buttonThird: "#000",
@@ -56,10 +60,12 @@ module.exports = {
         bannerThird: "#DBDBDB",
         bannerFourth: "#D6EBE7",
         bannerFifth: "#B7C5D7",
+        specialProduct: "#CCE9F9",
 
         bannerPrimarySale: "#FDF4F4",
         bannerSecondarySale: "#FEF1F2",
 
+        specialOffer: "#FF0000",
         backgroundFaq: "#F6F6F6",
         activeFaq: "#0083FF",
         bannerFaq: "#8CB1A0",
