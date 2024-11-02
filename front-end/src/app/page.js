@@ -2,6 +2,7 @@ import { Banners } from "./components/Banners";
 import { CtaPrimary } from "./components/CtaPrimary";
 import { Hero } from "./components/Hero";
 import { PopularProducts } from "./components/PopularProducts";
+import { Sale } from "./components/Sale";
 import { TrendingCategories } from "./components/TrendingCategories";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <CtaPrimary />
       <TrendingCategories />
       <Banners />
+      <Sale />
     </main>
   );
 }
