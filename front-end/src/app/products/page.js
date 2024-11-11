@@ -10,6 +10,7 @@ import { FilterByBrands } from "../components/FilterByBrands";
 import { CtaSecondary } from "../components/CtaSecondary";
 import { products } from "../data/products";
 import { Suspense } from "react"; // Importujemy Suspense
+import { ProductsGrid } from "../components/ProductsGrid";
 
 export default function Home() {
   return (
