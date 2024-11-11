@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { Button } from "./Button"; // Zakładam, że masz własny komponent Button
 import Image from "next/image";
+import Link from "next/link";
 
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product, buttonShown = true }) => {
   const rating = 3.4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -81,58 +82,61 @@ export const ProductCard = ({ product }) => {
           ))}
         </div>
       </div>
-
-      {/* Promocja i nazwa promocji */}
-      <div className="flex items-center justify-between mb-2">
-        <span className="bg-secondary text-white px-2 py-1 rounded-md text-sm">
-          {discountPercentage}% OFF
-        </span>
-        <span className="text-gray-700 text-sm">{product.promotionName}</span>
-      </div>
-
-      {/* Nazwa produktu */}
-      <h3 className="text-lg font-bold mb-2">{product.name}</h3>
-
-      {/* Cena produktu */}
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <span className="text-xl font-bold text-specialPricePrimary mr-2">
-            ${product.discount_price || product.price}
+      <Link href={`/product/${product.id}`}>
+        {/* Promocja i nazwa promocji */}
+        <div className="flex items-center justify-between mb-2">
+          <span className="bg-secondary text-white px-2 py-1 rounded-md text-sm">
+            {discountPercentage}% OFF
           </span>
-          {product.discount_price && (
-            <span className="text-oldPricePrimary line-through mr-2">
-              ${product.price}
+          <span className="text-gray-700 text-sm">{product.promotionName}</span>
+        </div>
+
+        {/* Nazwa produktu */}
+        <h3 className="text-lg font-bold mb-2">{product.name}</h3>
+
+        {/* Cena produktu */}
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <span className="text-xl font-bold text-specialPricePrimary mr-2">
+              ${product.discount_price || product.price}
             </span>
-          )}
+            {product.discount_price && (
+              <span className="text-oldPricePrimary line-through mr-2">
+                ${product.price}
+              </span>
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* Przycisk dodania do koszyka */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-yellow-400 text-lg mr-1">
-            {"\u2605".repeat(Math.floor(rating))}
+        {/* Przycisk dodania do koszyka */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-yellow-400 text-lg mr-1">
+              {"\u2605".repeat(Math.floor(rating))}
+            </span>
+            <span className="text-gray-600">({rating})</span>
+          </div>
+          <span className="text-sm text-avaible">
+            Available only: {product.in_stock}
           </span>
-          <span className="text-gray-600">({rating})</span>
         </div>
-        <span className="text-sm text-avaible">
-          Available only: {product.in_stock}
-        </span>
-      </div>
 
-      <ul className="mt-5">
-        {product.key_features.slice(0, 3).map((key) => {
-          return (
-            <li key={key} className="flex gap-2 items-center mb-2">
-              <Image src="/images/icons/apply.png" width={20} height={20} />
-              {key}
-            </li>
-          );
-        })}
-      </ul>
-      <div className="flex justify-center mt-5">
-        <Button color="second">Add To Cart</Button>
-      </div>
+        <ul className="mt-5">
+          {product.key_features.slice(0, 3).map((key) => {
+            return (
+              <li key={key} className="flex gap-2 items-center mb-2">
+                <Image src="/images/icons/apply.png" width={20} height={20} />
+                {key}
+              </li>
+            );
+          })}
+        </ul>
+      </Link>
+      {buttonShown && (
+        <div className="flex justify-center mt-5">
+          <Button color="second">Add To Cart</Button>
+        </div>
+      )}
 
       {/* Informacje w prawym rogu */}
       <div className="absolute top-2 right-2">

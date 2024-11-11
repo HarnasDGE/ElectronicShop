@@ -1,0 +1,36 @@
+.range-input {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  appearance: none;
+  height: 0;
+}
+.range-input::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  appearance: none;
+  background-color: #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-track {
+  position: absolute;
+  height: 4px;
+  background: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 0;
+}
+
+.slider-range {
+  position: absolute;
+  height: 4px;
+  background: #000;
+  top: 50%;
+  transform: translateY(-50%);
+}

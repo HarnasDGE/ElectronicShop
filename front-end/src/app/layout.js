@@ -1,3 +1,4 @@
+import { Footer } from "./components/Footer";
 import { MainBar } from "./components/MainBar";
 import { ThirdBar } from "./components/ThirdBar";
 import { TopBar } from "./components/TopBar";
@@ -17,12 +18,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.className}`}>
+      <body className={`${outfit.className} flex flex-col min-h-[100dvh]`}>
         <TopBar />
         <MainBar />
         <ThirdBar />
 
         {children}
+        <Footer />
       </body>
     </html>
   );

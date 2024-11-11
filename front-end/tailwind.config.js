@@ -13,6 +13,9 @@ module.exports = {
         background: "#fff",
         backgroundPrimary: "#fff",
         backgroundSecondary: "#DDE8E3",
+        backgroundFooter: "#EFEFEF",
+        backgroundComingSoon: "#93C2E0",
+        backgroundSidebar: "#E8F1F7",
         mainText: "#fff",
         secondText: "#161616",
         menuText: "#2C2C2C",
@@ -51,6 +54,7 @@ module.exports = {
         buttonThird: "#000",
 
         ctaPrimary: "#2D446E",
+        ctaSecondary: "#1A1A19",
 
         activePagination: "#0083FF",
         backgroundPagination: "#F7F7F8",
@@ -77,6 +81,15 @@ module.exports = {
 
         backgroundFooter: "#EFEFEF",
         dividerFooter: "#CFCFCF",
+
+        backgroundInputComingSoon: "#000",
+
+        silver: "#a3a3a3",
+        black: "#000000",
+        blue: "#1E73BE",
+        pink: "#e439b0",
+        roseGold: "#B76E79",
+        red: "#EE0000",
       },
       fontSize: {
         xs: "10px",
@@ -90,6 +103,8 @@ module.exports = {
       },
       backgroundImage: {
         heroGradient: "linear-gradient(90deg, #000, transparent 70%)",
+        subPageGradient:
+          "radial-gradient(circle, rgba(225,230,255,1) 0%, rgba(163,179,255,1) 70%)",
       },
     },
   },

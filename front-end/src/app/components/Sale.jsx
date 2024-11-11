@@ -5,6 +5,7 @@ import ArrowRightIcon from "../assets/icons/arrowRight.svg";
 import { getProductById } from "../api/getProductById";
 import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
+import { calculateTimeLeft } from "../utilities/calculateTimeLeft";
 
 export const Sale = () => {
   const products = [
@@ -14,31 +15,12 @@ export const Sale = () => {
     getProductById(4),
   ];
 
-  const endDate = new Date("2024-11-05T23:59:59").getTime(); // Ustal datę końcową
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const endDate = new Date("2024-11-13T23:59:59").getTime(); // Ustal datę końcową
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(endDate));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-
-      if (distance > 0) {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        clearInterval(timer);
-      }
+      setTimeLeft(calculateTimeLeft(endDate));
     }, 1000);
 
     return () => clearInterval(timer);

@@ -1,7 +1,13 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import TriangleIcon from "../assets/icons/triangle.svg";
+import CircleIcon from "../assets/icons/circle.svg";
 
-export const Carousel = ({ children, pagination = "default" }) => {
+export const Carousel = ({
+  children,
+  pagination = "default",
+  itemsCount = 4,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const isDragging = useRef(false);
@@ -25,7 +31,7 @@ export const Carousel = ({ children, pagination = "default" }) => {
       const width = window.innerWidth;
       if (width >= 1536) {
         // Punkt przerwania '2xl' w Tailwind CSS
-        setItemsToShow(4);
+        setItemsToShow(itemsCount);
       } else if (width >= 1280) {
         // Punkt przerwania 'xl' w Tailwind CSS
         setItemsToShow(2);
@@ -142,6 +148,19 @@ export const Carousel = ({ children, pagination = "default" }) => {
                 }`}
               >
                 {index}
+              </div>
+            )
+          )}
+        </div>
+      )}
+
+      {pagination === "geometry" && (
+        <div className="flex justify-center mt-4">
+          {Array.from(
+            { length: Math.ceil(slideCount / itemsToShow) },
+            (_, index) => (
+              <div key={index} className="mx-1 transition-all duration-300">
+                {index === currentIndex ? <TriangleIcon /> : <CircleIcon />}
               </div>
             )
           )}
