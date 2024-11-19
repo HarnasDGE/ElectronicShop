@@ -3,7 +3,7 @@ import { products } from "../data/products.js";
 
 export const getProductById = (productId) => {
   // Znajdź produkt o podanym id
-  const product = products.find((product) => product.id === productId);
+  const product = products.find((product) => product.id === Number(productId));
 
   // Zwróć produkt lub wiadomość, że nie znaleziono
   if (product) {

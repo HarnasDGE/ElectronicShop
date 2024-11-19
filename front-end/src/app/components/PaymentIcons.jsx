@@ -6,27 +6,55 @@ import PayoneerIcon from "../assets/images/payoneer.svg";
 import AmazonPayIcon from "../assets/images/amazonpay.svg";
 import GPayIcon from "../assets/images/gpay.svg";
 
-export const PaymentIcons = () => (
+export const PaymentIcons = ({ background = "default" }) => (
   <ul className="flex items-center gap-3 h-fit">
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <VisaIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <MastercardIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <PayPalIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <SkrillIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <PayoneerIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <AmazonPayIcon />
     </li>
-    <li className="bg-background rounded p-1">
+    <li
+      className={`${
+        background === "gray" ? "bg-gray" : "bg-background"
+      } rounded p-1`}
+    >
       <GPayIcon />
     </li>
   </ul>

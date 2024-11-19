@@ -47,6 +47,7 @@ module.exports = {
         backgroundProductPrimary: "#F5F5F5",
 
         gray: "rgba(0, 45, 88, 0.20)",
+        lightGray: "rgba(0, 45, 88, 0.05)",
 
         trendingCategories: "#EFEFEF",
         buttonPrimary: "#FED700",
@@ -105,6 +106,9 @@ module.exports = {
         heroGradient: "linear-gradient(90deg, #000, transparent 70%)",
         subPageGradient:
           "radial-gradient(circle, rgba(225,230,255,1) 0%, rgba(163,179,255,1) 70%)",
+      },
+      boxShadow: {
+        normal: "rgba(149, 157, 165, 0.2) 0px 8px 24px;",
       },
     },
   },

@@ -1,4 +1,4 @@
-export const products = [
+const products = [
   {
     name: "Dell Inspiron 15 - Silver - 8GB RAM - 256GB SSD",
     price: 3299.0,
@@ -31,64 +31,17 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "8GB RAM - 256GB SSD" },
-      { name: "Screen Size", value: "15.6 inch" },
-      { name: "Resolution", value: "1920x1080" },
-      { name: "Panel Type", value: "IPS" },
-      { name: "Battery", value: "4500mAh" },
-      { name: "Processor", value: "Intel i5 11th Gen" },
-      { name: "OS", value: "Windows 11" },
-      { name: "Features", value: "Backlit Keyboard" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "8GB RAM - 256GB SSD" },
+      { name: "screen_size", value: "15.6 inch" },
+      { name: "resolution", value: "1920x1080" },
+      { name: "panel_type", value: "IPS" },
+      { name: "battery", value: "4500mAh" },
+      { name: "processor", value: "Intel i5 11th Gen" },
+      { name: "operating_system", value: "Windows 11" },
+      { name: "features", value: "Backlit Keyboard" },
     ],
   },
   {
@@ -123,64 +76,17 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "16GB RAM - 512GB SSD" },
-      { name: "Screen Size", value: "15.6 inch" },
-      { name: "Resolution", value: "1920x1080" },
-      { name: "Panel Type", value: "IPS" },
-      { name: "Battery", value: "4500mAh" },
-      { name: "Processor", value: "Intel i5 11th Gen" },
-      { name: "OS", value: "Windows 11" },
-      { name: "Features", value: "Backlit Keyboard" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "16GB RAM - 512GB SSD" },
+      { name: "screen_size", value: "15.6 inch" },
+      { name: "resolution", value: "1920x1080" },
+      { name: "panel_type", value: "IPS" },
+      { name: "battery", value: "4500mAh" },
+      { name: "processor", value: "Intel i5 11th Gen" },
+      { name: "operating_system", value: "Windows 11" },
+      { name: "features", value: "Backlit Keyboard" },
     ],
   },
   {
@@ -215,64 +121,17 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "8GB RAM - 256GB SSD" },
-      { name: "Screen Size", value: "15.6 inch" },
-      { name: "Resolution", value: "1920x1080" },
-      { name: "Panel Type", value: "IPS" },
-      { name: "Battery", value: "4500mAh" },
-      { name: "Processor", value: "Intel i5 11th Gen" },
-      { name: "OS", value: "Windows 11" },
-      { name: "Features", value: "Backlit Keyboard" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "8GB RAM - 256GB SSD" },
+      { name: "screen_size", value: "15.6 inch" },
+      { name: "resolution", value: "1920x1080" },
+      { name: "panel_type", value: "IPS" },
+      { name: "battery", value: "4500mAh" },
+      { name: "processor", value: "Intel i5 11th Gen" },
+      { name: "operating_system", value: "Windows 11" },
+      { name: "features", value: "Backlit Keyboard" },
     ],
   },
   {
@@ -307,64 +166,17 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "16GB RAM - 512GB SSD" },
-      { name: "Screen Size", value: "15.6 inch" },
-      { name: "Resolution", value: "1920x1080" },
-      { name: "Panel Type", value: "IPS" },
-      { name: "Battery", value: "4500mAh" },
-      { name: "Processor", value: "Intel i5 11th Gen" },
-      { name: "OS", value: "Windows 11" },
-      { name: "Features", value: "Backlit Keyboard" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "16GB RAM - 512GB SSD" },
+      { name: "screen_size", value: "15.6 inch" },
+      { name: "resolution", value: "1920x1080" },
+      { name: "panel_type", value: "IPS" },
+      { name: "battery", value: "4500mAh" },
+      { name: "processor", value: "Intel i5 11th Gen" },
+      { name: "operating_system", value: "Windows 11" },
+      { name: "features", value: "Backlit Keyboard" },
     ],
   },
   {
@@ -398,63 +210,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Blue" },
-      { name: "Capacity", value: "8GB RAM - 256GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Blue" },
+      { name: "capacity", value: "8GB RAM - 256GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -488,63 +253,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Blue" },
-      { name: "Capacity", value: "16GB RAM - 512GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Blue" },
+      { name: "capacity", value: "16GB RAM - 512GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -578,63 +296,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Pink" },
-      { name: "Capacity", value: "8GB RAM - 256GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Pink" },
+      { name: "capacity", value: "8GB RAM - 256GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -668,63 +339,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Pink" },
-      { name: "Capacity", value: "16GB RAM - 512GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Pink" },
+      { name: "capacity", value: "16GB RAM - 512GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -758,63 +382,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "8GB RAM - 256GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "8GB RAM - 256GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -848,63 +425,16 @@ export const products = [
       "/images/products/laptop2.jpg",
       "/images/products/laptop3.jpg",
     ],
-    fullDescription: `
-        
-        
-        # Dell Inspiron 15: Profesjonalna Maszyna do Pracy
-        
-        ## Wydajność Bez Kompromisów
-        
-        Poznaj laptopa, który spełni wszystkie Twoje zawodowe wymagania. Dell Inspiron 15 z 16GB RAM i dyskiem SSD 512GB to gwarancja płynnej pracy nawet przy najbardziej wymagających zadaniach.
-        
-        ### Kluczowe Przewagi
-        - **Potężna pamięć 16GB** dla wielozadaniowości
-        - **Ogromna przestrzeń 512GB SSD** na Twoje projekty
-        - **Procesor Intel i5** 11. generacji
-        - **Elastyczność** systemu Windows 11
-        
-        ## Zdjęcia Produktu
-        
-        <Image 
-          src="/images/products/laptop.jpg" 
-          alt="Dell Inspiron 15 - profesjonalne narzędzie" 
-          width={1200} 
-          height={800} 
-        />
-        
-        <Image 
-          src="/images/products/laptop2.jpg" 
-          alt="Dell Inspiron 15 - wydajność premium" 
-          width={1200} 
-          height={800} 
-        />
-        
-        ## Stworzony dla Profesjonalistów
-        
-        Idealny dla grafików, programistów i specjalistów wymagających najwyższej wydajności. Srebrna obudowa podkreśli Twój profesjonalizm.
-        
-        ## Specyfikacja Techniczna
-        
-        - **Procesor**: Intel Core i5 11. generacji
-        - **Pamięć**: Wydajna pamięć 16GB RAM
-        - **Magazyn**: Ultraszybki dysk SSD 512GB
-        - **Ekran**: 15,6" Full HD IPS
-        
-        ## Już Teraz za Jedyne 2 999 zł
-        
-        Profesjonalne narzędzie czeka na Ciebie!
-        
-        [Kup Teraz]
-        `,
+    fullDescription: "...\n",
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "16GB RAM - 512GB SSD" },
-      { name: "Screen Size", value: "24 inch" },
-      { name: "Resolution", value: "4480x2520" },
-      { name: "Panel Type", value: "Retina" },
-      { name: "Processor", value: "Apple M1 Chip" },
-      { name: "OS", value: "macOS Monterey" },
-      { name: "Features", value: "Retina Display, 4.5K Resolution" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "16GB RAM - 512GB SSD" },
+      { name: "screen_size", value: "24 inch" },
+      { name: "resolution", value: "4480x2520" },
+      { name: "panel_type", value: "Retina" },
+      { name: "processor", value: "Apple M1 Chip" },
+      { name: "operating_system", value: "macOS Monterey" },
+      { name: "features", value: "Retina Display, 4.5K Resolution" },
     ],
   },
   {
@@ -987,11 +517,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "40mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "40mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1078,11 +608,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "44mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "44mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1169,11 +699,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "40mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "40mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1260,11 +790,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Silver" },
-      { name: "Capacity", value: "44mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Silver" },
+      { name: "capacity", value: "44mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1351,11 +881,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Rose Gold" },
-      { name: "Capacity", value: "40mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Rose Gold" },
+      { name: "capacity", value: "40mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1442,11 +972,11 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Rose Gold" },
-      { name: "Capacity", value: "44mm" },
-      { name: "Screen Size", value: "1.4 inch" },
-      { name: "Resolution", value: "450x450" },
-      { name: "Panel Type", value: "AMOLED" },
+      { name: "color", value: "Rose Gold" },
+      { name: "capacity", value: "44mm" },
+      { name: "screen_size", value: "1.4 inch" },
+      { name: "resolution", value: "450x450" },
+      { name: "panel_type", value: "AMOLED" },
       {
         name: "features",
         value: "Heart Rate Monitoring, ECG, Fitness Tracking, WearOS",
@@ -1531,8 +1061,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "Body Only" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "Body Only" },
       { name: "sensor_type", value: "Full-Frame" },
     ],
   },
@@ -1614,8 +1144,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "With RF 24-105mm Lens" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "With RF 24-105mm Lens" },
       { name: "sensor_type", value: "Full-Frame" },
     ],
   },
@@ -1695,8 +1225,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "32GB" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "32GB" },
     ],
   },
   {
@@ -1775,8 +1305,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "64GB" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "64GB" },
     ],
   },
   {
@@ -1855,8 +1385,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Black" },
-      { name: "Capacity", value: "128GB" },
+      { name: "color", value: "Black" },
+      { name: "capacity", value: "128GB" },
     ],
   },
   {
@@ -1935,8 +1465,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Blue" },
-      { name: "Capacity", value: "32GB" },
+      { name: "color", value: "Blue" },
+      { name: "capacity", value: "32GB" },
     ],
   },
   {
@@ -2015,8 +1545,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Blue" },
-      { name: "Capacity", value: "64GB" },
+      { name: "color", value: "Blue" },
+      { name: "capacity", value: "64GB" },
     ],
   },
   {
@@ -2095,8 +1625,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Blue" },
-      { name: "Capacity", value: "128GB" },
+      { name: "color", value: "Blue" },
+      { name: "capacity", value: "128GB" },
     ],
   },
   {
@@ -2175,8 +1705,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Red" },
-      { name: "Capacity", value: "32GB" },
+      { name: "color", value: "Red" },
+      { name: "capacity", value: "32GB" },
     ],
   },
   {
@@ -2255,8 +1785,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Red" },
-      { name: "Capacity", value: "64GB" },
+      { name: "color", value: "Red" },
+      { name: "capacity", value: "64GB" },
     ],
   },
   {
@@ -2335,8 +1865,8 @@ export const products = [
         [Kup Teraz]
         `,
     specification: [
-      { name: "Color", value: "Red" },
-      { name: "Capacity", value: "128GB" },
+      { name: "color", value: "Red" },
+      { name: "capacity", value: "128GB" },
     ],
   },
 ];
