@@ -108,7 +108,7 @@ module.exports = {
           "radial-gradient(circle, rgba(225,230,255,1) 0%, rgba(163,179,255,1) 70%)",
       },
       boxShadow: {
-        normal: "rgba(149, 157, 165, 0.2) 0px 8px 24px;",
+        normal: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
       },
     },
   },
