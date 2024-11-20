@@ -5,7 +5,7 @@ import SonyIcon from "../assets/images/sony.svg";
 
 export const BannerFour = () => {
   return (
-    <li className="relative w-[25%] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerThird text-mainText">
+    <li className="relative max-h-[800px] min-h-[800px] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerThird text-mainText">
       <div
         className="absolute inset-0 z-0 mix-blend-multiply"
         style={{
@@ -15,6 +15,7 @@ export const BannerFour = () => {
           backgroundRepeat: "no-repeat",
         }}
       ></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-primary z-10 opacity-30" />
       <div className="flex-grow  p-4 rounded relative z-10">
         <SonyIcon />
         <div className="flex gap-2 mt-10">

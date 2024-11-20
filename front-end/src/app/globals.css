@@ -38,3 +38,7 @@ h4 {
 h6 {
   @apply text-xl font-bold;
 }
+
+p {
+  @apply py-3;
+}
