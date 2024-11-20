@@ -1,6 +1,6 @@
 export const TabDeliveryAndReturns = () => {
   return (
-    <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
+    <div className="mt-8 bg-white p-6 rounded-lg shadow">
       <h2 className="text-2xl font-semibold mb-4">Dostawa i Zwroty</h2>
 
       <div className="mb-6">
