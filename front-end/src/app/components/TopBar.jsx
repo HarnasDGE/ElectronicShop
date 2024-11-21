@@ -10,17 +10,17 @@ export const TopBar = () => {
         <ul className="flex text-secondText">
           <li className="flex gap-1 items-center border-secondText border-r-2 border-solid pr-3">
             <PhoneIcon />
-            <p className=""> Contact Us 24 / 7 : +1800 4568 98745</p>
+            <p className="py-0"> Contact Us 24 / 7 : +1800 4568 98745</p>
           </li>
           <li className="flex gap-1 items-center pl-3">
             <EmailIcon />
-            <p> electric@email.com</p>
+            <p className="py-0"> electric@email.com</p>
           </li>
         </ul>
         <ul className="hidden xl:flex gap-5 ">
           <li className="flex gap-2 items-center">
             <UserIcon />
-            <p>Sign In or Register</p>
+            <p className="py-0">Sign In or Register</p>
           </li>
           <li>
             <select value="English" className="bg-transparent ">

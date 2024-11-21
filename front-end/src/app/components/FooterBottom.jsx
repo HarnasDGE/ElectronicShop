@@ -6,7 +6,7 @@ export const FooterBottom = () => (
     <div className="flex-grow">©Designthemes all rights Reserved</div>
     <div className="flex gap-3 items-center">
       <PaymentIcons />
-      <p>Terms & Condition | Privacy Policy</p>
+      <p className="py-0">Terms & Condition | Privacy Policy</p>
     </div>
   </WidthWrapper>
 );

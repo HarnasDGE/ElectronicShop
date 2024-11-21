@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { Divider } from "./Divider";
 import { getPosts } from "../api/getPosts";
@@ -19,7 +20,7 @@ export const RecentPosts = () => {
   }, []);
 
   return (
-    <div className="mt-12 border-2 border-gray rounded-3xl py-8 h-fit">
+    <div className=" border-2 border-gray rounded-3xl py-8 h-fit">
       <h2 className="text-2xl font-bold mb-6 px-7">Recent Posts</h2>
       <Divider />
       <div className="grid gap-6 px-7 pt-7">

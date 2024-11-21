@@ -8,15 +8,15 @@ export const Address = () => (
     <ul className="flex flex-col gap-3 pt-6">
       <li className="flex gap-2 items-center ">
         <GpsIcon />
-        <p>9826 Painter Ave, Whittier, CA, United States.</p>
+        <p className="py-0">9826 Painter Ave, Whittier, CA, United States.</p>
       </li>
       <li className="flex gap-2 items-center">
         <PhoneIcon />
-        <p>+1800 396 756</p>
+        <p className="py-0">+1800 396 756</p>
       </li>
       <li className="flex gap-2 items-center">
         <EmailIcon />
-        <p>support@aahca.com</p>
+        <p className="py-0">support@aahca.com</p>
       </li>
     </ul>
   </div>

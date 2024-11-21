@@ -18,8 +18,8 @@ export function Tags() {
   }, []);
 
   return (
-    <div className="mt-12 border-2 border-gray rounded-3xl py-8 h-fit">
-      <h2 className="text-2xl font-bold mb-6 px-7">Recent Posts</h2>
+    <div className="border-2 border-gray rounded-3xl py-8 h-fit">
+      <h2 className="text-2xl font-bold mb-6 px-7">Tags</h2>
       <Divider />
       <div className="flex flex-wrap gap-3 p-5">
         {tags.map((tag, index) => (

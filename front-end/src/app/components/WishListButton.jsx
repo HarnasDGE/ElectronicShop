@@ -13,7 +13,9 @@ export const WishListButton = ({ className }) => {
           {wishListLength}
         </div>
       </div>
-      <p className="group-hover:text-secondary hidden xl:block">WishList</p>
+      <p className="group-hover:text-secondary hidden xl:block py-0">
+        WishList
+      </p>
     </button>
   );
 };

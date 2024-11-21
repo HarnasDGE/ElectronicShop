@@ -115,22 +115,23 @@ export const ThirdBar = ({ className }) => {
         <ul className="flex gap-3 hidden 2xl:flex">
           <Link href="#">
             <li className="flex gap-2">
-              <DealsIcon /> <p className="underline">Today Deals</p>
+              <DealsIcon /> <p className="underline py-0">Today Deals</p>
             </li>
           </Link>
           <Link href="#">
             <li className="flex gap-2">
-              <LightiningIcon /> <p className="underline">Flash Sale</p>
+              <LightiningIcon /> <p className="underline py-0">Flash Sale</p>
             </li>
           </Link>
           <Link href="#">
             <li className="flex gap-2">
-              <OfferIcon /> <p className="underline">Buy One Get One</p>
+              <OfferIcon /> <p className="underline py-0">Buy One Get One</p>
             </li>
           </Link>
           <Link href="#">
             <li className="flex gap-2">
-              <SpecificOfferIcon /> <p className="underline">Specific Offer</p>
+              <SpecificOfferIcon />{" "}
+              <p className="underline py-0">Specific Offer</p>
             </li>
           </Link>
         </ul>

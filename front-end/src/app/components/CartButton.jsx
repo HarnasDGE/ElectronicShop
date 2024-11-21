@@ -13,7 +13,7 @@ export const CartButton = ({ className }) => {
           {cartLength}
         </div>
       </div>
-      <p className="group-hover:text-secondary hidden xl:block">Cart</p>
+      <p className="group-hover:text-secondary hidden xl:block py-0">Cart</p>
     </button>
   );
 };
