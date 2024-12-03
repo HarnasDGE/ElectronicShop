@@ -11,6 +11,7 @@ import { OurCustomerSays } from "./components/OurCusterSays";
 import { OurTrendingBrands } from "./components/OurTrendingBrands";
 import { PopularProducts } from "./components/PopularProducts";
 import { Sale } from "./components/Sale";
+import { SubscribeModalTrigger } from "./components/SubscribeModalTrigger";
 import { TopSellingProducts } from "./components/TopSellingProducts";
 import { TrendingCategories } from "./components/TrendingCategories";
 import { WidthWrapper } from "./components/WidthWrapper";
@@ -35,6 +36,7 @@ export default function Home() {
       <OurCustomerSays />
       <Adventages />
       <Instagram />
+      <SubscribeModalTrigger />
     </main>
   );
 }

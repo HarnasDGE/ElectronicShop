@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { WidthWrapper } from "./WidthWrapper";
 import { Button } from "./Button";
+import Link from "next/link";
 
 export const CtaThird = () => {
   return (
@@ -12,6 +13,7 @@ export const CtaThird = () => {
             width={100}
             height={100}
             className="aspect-video"
+            alt="Plane image"
           />
           <h2 className="w-1/2">
             Our latest updates delivered straight to your inbox.
@@ -30,7 +32,12 @@ export const CtaThird = () => {
           </div>
           <div>
             <input type="radio" id="agree" className="mx-2 text-secondText" />
-            <label htmlFor="agree">I agree with the terms & conditions</label>
+            <label htmlFor="agree">
+              I agree with the{" "}
+              <Link href="/terms-and-condition" className="font-bold">
+                terms & conditions
+              </Link>
+            </label>
           </div>
         </form>
       </WidthWrapper>

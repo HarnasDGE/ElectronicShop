@@ -4,8 +4,10 @@ import ResizeIcon from "@/app/assets/icons/resize.svg";
 import HeartIcon from "@/app/assets/icons/heart.svg";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
 
 export const ProductActions = ({ product }) => {
+  const [, setWishlist] = useContext(WishlistContext);
   const [productsCount, setProductsCount] = useState(1);
   const [, setCart] = useContext(CartContext);
 
@@ -52,7 +54,11 @@ export const ProductActions = ({ product }) => {
       <Button color="none" type="rounded">
         <ResizeIcon />
       </Button>
-      <Button color="none" type="rounded">
+      <Button
+        color="none"
+        type="rounded"
+        onClick={() => setWishlist((prevState) => [...prevState, product])}
+      >
         <HeartIcon />
       </Button>
     </div>

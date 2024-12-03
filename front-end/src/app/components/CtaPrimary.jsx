@@ -6,7 +6,11 @@ import { Button } from "./Button";
 
 export const CtaPrimary = () => {
   return (
-    <WidthWrapper className="flex items-center justify-center gap-8 bg-ctaPrimary text-mainText rounded py-5">
+    <WidthWrapper className="relative z-0 flex items-center justify-center gap-8 bg-ctaPrimary text-mainText rounded py-5">
+      <div
+        className="absolute top-0 left-0 h-full w-full -z-10 mix-blend-multiply"
+        style={{ backgroundImage: "url(/images/patterns/pattern1.jpg)" }}
+      />
       <div className="flex items-end">
         <div className="flex flex-col ">
           <p>UPTO</p>

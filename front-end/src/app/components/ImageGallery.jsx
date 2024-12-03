@@ -37,6 +37,7 @@ export const ImageGallery = ({ images }) => {
           width={400}
           layout="responsive"
           className="aspect-square transition-all"
+          alt="Product image"
         />
         {window.innerWidth >= 1024 && (
           <>
@@ -74,6 +75,7 @@ export const ImageGallery = ({ images }) => {
             width={200}
             height={200}
             layout="responsive"
+            alt="Product Image"
             className={`row-span-1 col-span-1 shadow-normal border-secondText rounded-xl transition-all ${
               selectedImageIndex === index ? "border-4 p-1" : ""
             }`}

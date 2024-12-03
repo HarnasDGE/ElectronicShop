@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { LanguageContext } from "../context/LanguageContext";
 import { CurrencyContext } from "../context/CurrencyContext";
+import { WishlistContext } from "../context/WishlistContext";
 
 export const Providers = ({ children }) => {
   // Context dla koszyka
@@ -22,6 +23,22 @@ export const Providers = ({ children }) => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart]);
+
+  const [wishlist, setWishlist] = useState(() => {
+    // Pobierz początkową wartość koszyka z localStorage
+    if (typeof window !== "undefined") {
+      const savedWishlist = localStorage.getItem("wishlist");
+      return savedWishlist ? JSON.parse(savedWishlist) : [];
+    }
+    return [];
+  });
+
+  // Użyj efektu, aby aktualizować localStorage za każdym razem, gdy cart się zmienia
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    }
+  }, [wishlist]);
 
   // Context dla walut
   const [currency, setCurrency] = useState(() => {
@@ -61,7 +78,9 @@ export const Providers = ({ children }) => {
     <CartContext.Provider value={[cart, setCart]}>
       <CurrencyContext.Provider value={[currency, setCurrency]}>
         <LanguageContext.Provider value={[language, setLanguage]}>
-          {children}
+          <WishlistContext.Provider value={[wishlist, setWishlist]}>
+            {children}
+          </WishlistContext.Provider>
         </LanguageContext.Provider>
       </CurrencyContext.Provider>
     </CartContext.Provider>

@@ -17,6 +17,7 @@ export default function Home() {
           height={200}
           layout="responsive"
           className="aspect-video rounded-2xl shadow-normal"
+          alt="Image Hero"
         />
         <OurStories />
         <HowWeWork />

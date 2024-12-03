@@ -7,7 +7,7 @@ export const RelatedProducts = ({ products }) => {
       <h2 className="mb-10">Related Products</h2>
       <Carousel>
         {products.map((product) => (
-          <li key={product}>
+          <li key={`${product.id}-relatedProducts`}>
             <ProductCard product={product} />
           </li>
         ))}

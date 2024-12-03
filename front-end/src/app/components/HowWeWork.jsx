@@ -9,6 +9,7 @@ export const HowWeWork = () => {
         height={300}
         layout="responsive"
         className="aspect-video rounded-3xl"
+        alt="Additional image"
       />
       <div>
         <p>How We Work</p>

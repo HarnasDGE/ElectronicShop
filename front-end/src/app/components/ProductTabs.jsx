@@ -18,8 +18,6 @@ export const ProductTabs = ({ product, mdxSource }) => {
     "Shipping & Returns",
   ];
 
-  console.log(`mdxSource: `, mdxSource.compiledSource);
-
   return (
     <div>
       <ul className="flex gap-4 py-5">

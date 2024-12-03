@@ -21,7 +21,7 @@ export const ProductColors = ({ group, selectedColor }) => {
 
           const productId = group.find((product) => product.color === color).id;
           return (
-            <li key={color}>
+            <li key={`${productId}-${color}`}>
               <Link href={`/product/${productId}`}>
                 <div
                   className={`h-4 w-4 rounded-full ${

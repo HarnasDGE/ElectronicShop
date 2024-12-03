@@ -16,7 +16,7 @@ export const ProductDetails = ({ product, group, reviews }) => {
       <div className="flex justify-between w-1/2 items-center py-5">
         <div className="flex gap-1 items-center">
           {Array.from({ length: reviews.stars }).map((_, index) => (
-            <StarIcon key={index} />
+            <StarIcon key={`${product.id}-star-${index}`} />
           ))}{" "}
           ({reviews.count} Reviews)
         </div>

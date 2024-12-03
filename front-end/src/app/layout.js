@@ -1,4 +1,5 @@
 import { Footer } from "./components/Footer";
+import { LoginModal } from "./components/LoginModal";
 import { MainBar } from "./components/MainBar";
 import { Providers } from "./components/Providers";
 import { ThirdBar } from "./components/ThirdBar";
