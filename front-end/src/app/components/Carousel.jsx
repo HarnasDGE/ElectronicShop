@@ -7,6 +7,7 @@ export const Carousel = ({
   children,
   pagination = "default",
   itemsCount = 4,
+  prefixId,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
@@ -112,7 +113,11 @@ export const Carousel = ({
         }}
       >
         {React.Children.map(children, (child, index) => (
-          <div className="flex-shrink-0" style={{ width: `${slideWidth}px` }}>
+          <div
+            className="flex-shrink-0"
+            style={{ width: `${slideWidth}px` }}
+            key={prefixId + index}
+          >
             {child}
           </div>
         ))}

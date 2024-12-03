@@ -51,7 +51,7 @@ export const TrendingCategories = () => {
           </li>
         ))}
       </ul>
-      <Carousel pagination="numbers">
+      <Carousel pagination="numbers" prefixId="trendingCategories">
         {products.map((product) => (
           <ProductCard key={product} product={product} />
         ))}

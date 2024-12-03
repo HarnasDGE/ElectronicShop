@@ -1,12 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "./Button"; // Zakładam, że masz własny komponent Button
 import Image from "next/image";
 import Link from "next/link";
+import { CartContext } from "../context/CartContext";
 
 export const ProductCard = ({ product, buttonShown = true }) => {
   const rating = 3.4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [, setCart] = useContext(CartContext);
   const [touchStartX, setTouchStartX] = useState(null);
 
   const handlePrevClick = () => {
@@ -47,7 +49,10 @@ export const ProductCard = ({ product, buttonShown = true }) => {
       : null;
 
   return (
-    <div className="relative border border-gray rounded-lg p-5 ">
+    <div
+      className="relative border border-gray rounded-lg p-5 "
+      key={product.id}
+    >
       {/* Sekcja zdjęć produktu jako karuzela */}
       <div
         className="relative mb-4 overflow-hidden"
@@ -56,7 +61,7 @@ export const ProductCard = ({ product, buttonShown = true }) => {
       >
         {product.images.map((image, index) => (
           <img
-            key={index}
+            key={`productImage-${product.id}-${index}`}
             src={image}
             alt={product.name}
             className={`w-full object-cover rounded-lg transition-transform duration-700 ease-in-out transform ${
@@ -74,7 +79,7 @@ export const ProductCard = ({ product, buttonShown = true }) => {
         <div className="flex justify-center space-x-1 mt-2">
           {product.images.map((_, index) => (
             <div
-              key={index}
+              key={`dotImage-${product.id}-${index}`}
               className={`w-2 h-2 rounded-full transition-colors duration-300 ${
                 index === currentImageIndex ? "bg-gray-800" : "bg-gray-400"
               }`}
@@ -108,7 +113,6 @@ export const ProductCard = ({ product, buttonShown = true }) => {
           </div>
         </div>
 
-        {/* Przycisk dodania do koszyka */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-yellow-400 text-lg mr-1">
@@ -122,10 +126,18 @@ export const ProductCard = ({ product, buttonShown = true }) => {
         </div>
 
         <ul className="mt-5">
-          {product.key_features.slice(0, 3).map((key) => {
+          {product.key_features.slice(0, 3).map((key, index) => {
             return (
-              <li key={key} className="flex gap-2 items-center mb-2">
-                <Image src="/images/icons/apply.png" width={20} height={20} />
+              <li
+                key={`${product.id}-key-${index}`}
+                className="flex gap-2 items-center mb-2"
+              >
+                <Image
+                  src="/images/icons/apply.png"
+                  width={20}
+                  height={20}
+                  alt="Apply Icon"
+                />
                 {key}
               </li>
             );
@@ -134,7 +146,13 @@ export const ProductCard = ({ product, buttonShown = true }) => {
       </Link>
       {buttonShown && (
         <div className="flex justify-center mt-5">
-          <Button color="second">Add To Cart</Button>
+          <Button
+            color="second"
+            onClick={() => setCart((prevState) => [...prevState, product])}
+          >
+            {" "}
+            Add To Cart
+          </Button>
         </div>
       )}
 

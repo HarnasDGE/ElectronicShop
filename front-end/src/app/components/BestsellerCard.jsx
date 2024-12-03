@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "./Button"; // Zakładam, że masz własny komponent Button
+import Link from "next/link";
+import { CartContext } from "../context/CartContext";
 
 export const BestsellerCard = ({ product }) => {
   const rating = 3.4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [, setCart] = useContext(CartContext);
   const [touchStartX, setTouchStartX] = useState(null);
 
   const handlePrevClick = () => {
@@ -80,38 +83,43 @@ export const BestsellerCard = ({ product }) => {
           ))}
         </div>
       </div>
-
-      {/* Promocja i nazwa promocji */}
-      <div className="flex items-center justify-between mb-2">
-        <span className="bg-secondary text-white px-2 py-1 rounded-md text-sm">
-          {discountPercentage}% OFF
-        </span>
-        <span className="text-gray-700 text-sm">{product.promotionName}</span>
-      </div>
-
-      {/* Nazwa produktu */}
-      <h3 className="text-lg font-bold mb-2">{product.name}</h3>
-
-      {/* Cena produktu */}
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <span className="text-xl font-bold text-specialPricePrimary mr-2">
-            ${product.discount_price || product.price}
+      <Link href={`/product/${product.id}`}>
+        {/* Promocja i nazwa promocji */}
+        <div className="flex items-center justify-between mb-2">
+          <span className="bg-secondary text-white px-2 py-1 rounded-md text-sm">
+            {discountPercentage}% OFF
           </span>
-          {product.discount_price && (
-            <span className="text-oldPricePrimary line-through mr-2">
-              ${product.price}
-            </span>
-          )}
+          <span className="text-gray-700 text-sm">{product.promotionName}</span>
         </div>
-        <span className="text-sm text-avaible">
-          Available only: {product.in_stock}
-        </span>
-      </div>
 
+        {/* Nazwa produktu */}
+        <h3 className="text-lg font-bold mb-2">{product.name}</h3>
+
+        {/* Cena produktu */}
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <span className="text-xl font-bold text-specialPricePrimary mr-2">
+              ${product.discount_price || product.price}
+            </span>
+            {product.discount_price && (
+              <span className="text-oldPricePrimary line-through mr-2">
+                ${product.price}
+              </span>
+            )}
+          </div>
+          <span className="text-sm text-avaible">
+            Available only: {product.in_stock}
+          </span>
+        </div>
+      </Link>
       {/* Przycisk dodania do koszyka */}
       <div className="flex items-center justify-between">
-        <Button color="second">Add To Cart</Button>
+        <Button
+          color="second"
+          onClick={() => setCart((prevState) => [...prevState, product])}
+        >
+          Add To Cart
+        </Button>
         <div className="flex items-center">
           <span className="text-yellow-400 text-lg mr-1">
             {"\u2605".repeat(Math.floor(rating))}

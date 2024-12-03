@@ -25,6 +25,7 @@ export const Instagram = () => {
           width={300}
           height={300}
           className="w-[14.2%] aspect-square"
+          alt={`Instagram Photo number ${index}`}
         />
       ))}
 

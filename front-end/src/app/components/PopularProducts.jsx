@@ -60,7 +60,7 @@ export const PopularProducts = () => {
             })}
           </ul>
         </div>
-        <Carousel>
+        <Carousel prefixId="popularProduct">
           <BestsellerCard product={product} />
           <BestsellerCard product={product} />
           <BestsellerCard product={product} />

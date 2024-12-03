@@ -9,13 +9,7 @@ import { ProductActions } from "./ProductActions";
 import { ProductMeta } from "./ProductMeta";
 import StarIcon from "../assets/icons/starSecond.svg";
 
-export const ProductDetails = ({
-  product,
-  group,
-  reviews,
-  productsCount,
-  setProductsCount,
-}) => {
+export const ProductDetails = ({ product, group, reviews }) => {
   return (
     <div className="w-1/2">
       <h2 className="pt-4 leading-4">{product.name}</h2>
@@ -40,10 +34,7 @@ export const ProductDetails = ({
       <ProductKeyFeatures features={product.key_features} />
       <ProductColors group={group} selectedColor={product.color} />
       <ProductCapacities group={group} selectedCapacity={product.capacity} />
-      <ProductActions
-        productsCount={productsCount}
-        setProductsCount={setProductsCount}
-      />
+      <ProductActions product={product} />
       <ProductMeta product={product} />
     </div>
   );

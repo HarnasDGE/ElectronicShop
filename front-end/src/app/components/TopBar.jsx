@@ -2,6 +2,8 @@ import PhoneIcon from "../assets/icons/phone.svg";
 import EmailIcon from "../assets/icons/email.svg";
 import UserIcon from "../assets/icons/user.svg";
 import { WidthWrapper } from "./WidthWrapper";
+import { LanguageSelector } from "./LanguageSelector";
+import { CurrencySelector } from "./CurrencySelector";
 
 export const TopBar = () => {
   return (
@@ -23,16 +25,10 @@ export const TopBar = () => {
             <p className="py-0">Sign In or Register</p>
           </li>
           <li>
-            <select value="English" className="bg-transparent ">
-              <option>English</option>
-              <option>Polish</option>
-            </select>
+            <LanguageSelector />
           </li>
           <li>
-            <select value="USD" className="bg-transparent">
-              <option>USD</option>
-              <option>PLN</option>
-            </select>
+            <CurrencySelector />
           </li>
         </ul>
       </WidthWrapper>

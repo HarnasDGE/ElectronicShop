@@ -1,5 +1,6 @@
 import { Footer } from "./components/Footer";
 import { MainBar } from "./components/MainBar";
+import { Providers } from "./components/Providers";
 import { ThirdBar } from "./components/ThirdBar";
 import { TopBar } from "./components/TopBar";
 import "./globals.css";
@@ -19,11 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.className} flex flex-col min-h-[100dvh]`}>
-        <TopBar />
-        <MainBar />
-        <ThirdBar />
+        <Providers>
+          <TopBar />
 
-        {children}
+          <MainBar />
+          <ThirdBar />
+          {children}
+        </Providers>
         <Footer />
       </body>
     </html>

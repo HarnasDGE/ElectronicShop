@@ -16,8 +16,8 @@ export const ArticleCard = () => {
         src={article.images[0]}
         width={400}
         height={100}
-        className="aspect-video rounded-xl"
-        layout="responsive"
+        className="aspect-video rounded-xl w-full"
+        alt={`${article.title} Image`}
       />
       <div className="whitespace-nowrap pt-5 ">
         {article.date} - By ${article.author}

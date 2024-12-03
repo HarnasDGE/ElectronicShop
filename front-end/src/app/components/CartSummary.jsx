@@ -1,13 +1,14 @@
+import { CartContext } from "../context/CartContext";
 import { Button } from "./Button";
-import React from "react";
+import React, { useContext } from "react";
 
 export function CartSummary({
-  cart,
   discount,
   promoCode,
   setPromoCode,
   handleApplyPromoCode,
 }) {
+  const [cart] = useContext(CartContext);
   const deliveryCost = 15;
   const freeDeliveryThreshold = 300;
 
@@ -18,7 +19,7 @@ export function CartSummary({
   const totalPrice = discountedPrice + finalDeliveryCost;
 
   return (
-    <div className="border-t mt-6 pt-4">
+    <div className=" pt-4">
       <h3 className="text-lg font-bold mb-4">Cart Summary</h3>
       <div className="flex justify-between mb-2">
         <span>Items Total:</span>

@@ -3,7 +3,7 @@ import { Button } from "./Button";
 
 export const BannerThree = () => {
   return (
-    <li className="relative w-[25%] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerThird text-mainText">
+    <li className="relative w-[25%] p-8 rounded-xl flex flex-col justify-between max-h-[800px] min-h-[800px] overflow-hidden bg-bannerThird text-mainText">
       <div
         className="absolute inset-0 z-0 mix-blend-multiply"
         style={{
@@ -18,8 +18,10 @@ export const BannerThree = () => {
           <div className="relative w-full h-[50px]">
             <Image
               src="/images/companies/fireboltt.png"
-              layout="fill"
-              objectFit="contain"
+              height={40}
+              width={400}
+              className="w-fit"
+              alt="firebolt logo"
             />
           </div>
         </div>

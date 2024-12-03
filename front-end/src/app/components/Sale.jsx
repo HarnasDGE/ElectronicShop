@@ -68,8 +68,10 @@ export const Sale = () => {
         </Button>
       </div>
       <div className="w-3/4 flex gap-5">
-        {products.map((product) => {
-          return <ProductCard key={product.id} product={product} />;
+        {products.map((product, index) => {
+          return (
+            <ProductCard key={`${product.id} - ${index}`} product={product} />
+          );
         })}
       </div>
     </WidthWrapper>

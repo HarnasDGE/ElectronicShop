@@ -5,7 +5,7 @@ import SpecialOfferStarIcon from "../assets/icons/specialOfferStar.svg";
 
 export const BannerTwo = () => {
   return (
-    <li className="relative w-[25%] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerSecondary text-mainText">
+    <li className="relative w-[25%] p-8 rounded-xl flex flex-col justify-between max-h-[800px] min-h-[800px] overflow-hidden bg-bannerSecondary text-mainText">
       <div
         className="absolute inset-0 z-0"
         style={{

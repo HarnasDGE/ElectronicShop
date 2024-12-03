@@ -32,12 +32,7 @@ export default async function ProductPage({ params }) {
       <SubPageBar title={product.name} />
       <WidthWrapper className="flex gap-7 pt-20">
         <ImageGallery images={product.images} />
-        <ProductDetails
-          product={product}
-          group={group}
-          reviews={reviews}
-          productsCount={1} // Ustalona wartość początkowa
-        />
+        <ProductDetails product={product} group={group} reviews={reviews} />
       </WidthWrapper>
       <WidthWrapper>
         <ProductTabs product={product} mdxSource={mdxSource} />
