@@ -5,7 +5,7 @@ import { BannerFour } from "./BannerFour";
 
 export const Banners = () => {
   return (
-    <ul className="flex gap-10  items-stretch">
+    <ul className="flex gap-10 items-stretch justify-between  w-full">
       <BannerOne />
       <BannerTwo />
       <BannerThree />

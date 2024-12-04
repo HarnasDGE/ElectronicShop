@@ -7,6 +7,7 @@ import SpeechBubbleIcon from "../assets/icons/speechBubble.svg";
 import PhoneIcon from "../assets/icons/phone.svg";
 import { Button } from "../components/Button";
 import Link from "next/link";
+import { CtaThird } from "../components/CtaThird";
 
 export default function Home() {
   const contactItems = [
@@ -32,9 +33,9 @@ export default function Home() {
     },
   ];
   return (
-    <main className="flex-grow">
+    <main className="flex-grow flex flex-col">
       <SubPageBar title="Contact Us" />
-      <WidthWrapper className="flex py-20 gap-10">
+      <WidthWrapper className="flex py-20 gap-10 flex-grow">
         <div>
           <h2>Reach Out to Us. We're Just a Click Away!</h2>
           <p className="w-3/4 text-gray-600 mt-4">
@@ -100,6 +101,7 @@ export default function Home() {
           </div>
         </form>
       </WidthWrapper>
+      <CtaThird />
     </main>
   );
 }

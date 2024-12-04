@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import { WidthWrapper } from "./WidthWrapper";
 import ArrowRightIcon from "../assets/icons/arrowRight.svg";
 import { ArticleCard } from "./ArticleCard";
+import { Carousel } from "./Carousel";
 
 export const LatestNews = () => {
   return (
@@ -13,11 +14,11 @@ export const LatestNews = () => {
             More Blogs <ArrowRightIcon />
           </Button>
         </div>
-        <div className="flex justify-center gap-10 my-10">
+        <Carousel>
           <ArticleCard />
           <ArticleCard />
           <ArticleCard />
-        </div>
+        </Carousel>
       </WidthWrapper>
     </div>
   );

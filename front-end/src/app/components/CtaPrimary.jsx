@@ -13,17 +13,17 @@ export const CtaPrimary = () => {
       />
       <div className="flex items-end">
         <div className="flex flex-col ">
-          <p>UPTO</p>
-          <p className="text-[100px] font-extrabold leading-[60px]">40</p>
+          <p className="p-0">UPTO</p>
+          <p className="text-[100px] font-extrabold leading-[60px] pt-1">40</p>
         </div>
         <div>
-          <p className="text-[20px]">%</p>
-          <p className="text-[20px]">OFF</p>
+          <p className="text-3xl">%</p>
+          <p className="text-[20px] p-0">OFF</p>
         </div>
       </div>
       <div className="flex flex-col gap-5">
         <h2>Where innovation meets convenience in your home</h2>
-        <p>
+        <p className="p-0">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form
         </p>

@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import ArrowRightIcon from "../assets/icons/arrowRight.svg";
 
 import DellIcon from "../assets/images/dell.svg";
+import { PatternBackground } from "./PatternBackground";
 
 export const SpecialProduct = ({ product }) => {
   const brandsComponents = {
@@ -10,7 +11,8 @@ export const SpecialProduct = ({ product }) => {
   const BrandIconComponent = brandsComponents[product.brand];
 
   return (
-    <div className="flex flex-col gap-4 py-5 px-6 min-w-[25%] bg-specialProduct rounded-xl text-center h-auto">
+    <div className="relative flex flex-col gap-4 py-5 px-6 min-w-[25%] bg-specialProduct rounded-xl text-center h-auto">
+      <PatternBackground src="/images/patterns/pattern-squares.png" />
       {BrandIconComponent && (
         <BrandIconComponent
           width={50}

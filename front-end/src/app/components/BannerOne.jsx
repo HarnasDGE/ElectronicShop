@@ -1,21 +1,24 @@
+import Image from "next/image";
 import { Button } from "./Button";
+import { PatternBackground } from "./PatternBackground";
 
 export const BannerOne = () => {
   return (
-    <li className="relative p-8 rounded-xl flex flex-col justify-between max-h-[800px] min-h-[800px] overflow-hidden bg-bannerPrimary">
-      <div
-        className="absolute inset-0 z-0 mix-blend-multiply bg-contain bg-bottom  bg-no-repeat"
-        style={{
-          backgroundImage: "url(/images/banners/laptopAndMobile.jpg)",
-        }}
-      ></div>
-      <div className="absolute top-0 left-0 h-full w-full bg-secondary z-10 opacity-30"></div>
-      <div className="flex-grow  p-4 rounded relative ">
+    <li className="relative p-8 rounded-xl  w-full max-w-[1000px] flex flex-col justify-between max-h-[800px] min-h-[800px] overflow-hidden bg-bannerPrimary">
+      <PatternBackground src="/images/patterns/dark-mosaic.png" />
+      <div className="  p-4 rounded relative text-2xl ">
         <p>Applications</p>
-        <h3 className="text-4xl">UPTO 50% OFF</h3>
+        <h3 className="text-5xl">UPTO 50% OFF</h3>
         <p>Festival Season with Bestselling Appliances</p>
       </div>
-      <Button className="mt-auto relative z-10">Shop Now</Button>
+      <Image
+        src="/images/banners/laptopAndMobile.png"
+        height={300}
+        width={300}
+        className="flex-grow z-10 w-fit mx-auto drop-shadow-2xl"
+        alt="Laptop image"
+      />
+      <Button className="mt-auto relative z-10 ">Shop Now</Button>
     </li>
   );
 };

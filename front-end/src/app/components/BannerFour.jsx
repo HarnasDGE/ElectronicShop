@@ -2,20 +2,21 @@ import { Button } from "./Button";
 import AmazonIcon from "../assets/icons/amazon.svg";
 import FlipkartIcon from "../assets/icons/flipkart.svg";
 import SonyIcon from "../assets/images/sony.svg";
+import { PatternBackground } from "./PatternBackground";
 
 export const BannerFour = () => {
   return (
-    <li className="relative max-h-[800px] min-h-[800px] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerThird text-mainText">
+    <li className="relative w-full max-w-[1000px] max-h-[800px] min-h-[800px] p-8 rounded-xl flex flex-col justify-between h-full overflow-hidden bg-bannerThird text-mainText">
+      <PatternBackground src="/images/patterns/hexellence.png" />
       <div
         className="absolute inset-0 z-0 mix-blend-multiply"
         style={{
-          backgroundImage: "url(/images/banners/ps5.jpg)",
+          backgroundImage: "url(/images/banners/ps5.png)",
           backgroundSize: "contain",
           backgroundPosition: "right bottom",
           backgroundRepeat: "no-repeat",
         }}
       ></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-primary z-10 opacity-30" />
       <div className="flex-grow  p-4 rounded relative z-10">
         <SonyIcon />
         <div className="flex gap-2 mt-10">

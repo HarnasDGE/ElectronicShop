@@ -11,8 +11,7 @@ export const OurTrendingBrands = () => {
   return (
     <WidthWrapper>
       <h2 className="text-center">Our trending Brands</h2>
-      <div className="flex gap-5 justify-center items-center mt-10">
-        {/* Każda ikona brandu posiada border, padding, zaokrąglone rogi oraz wysokość rodzica */}
+      <div className="grid grid-cols-2 xl:flex gap-6 justify-center items-center mt-10">
         <div className="px-5  border border-gray rounded-lg flex items-center justify-center h-20">
           <BurberryIcon />
         </div>

@@ -25,11 +25,11 @@ export const Menu = ({ className }) => {
     },
     {
       name: "Track Order",
-      src: "/track-order",
+      src: "/order-track",
     },
     {
       name: "Contact",
-      src: "/contact",
+      src: "/contact-us",
     },
   ];
 

@@ -12,7 +12,7 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <div className="bg-backgroundFooter">
-      <WidthWrapper className="flex gap-5 pt-14 justify-between">
+      <WidthWrapper className="flex flex-col xl:flex-row gap-5 pt-14 justify-between">
         <div>
           <Image
             src="/images/logo/Logo.svg"

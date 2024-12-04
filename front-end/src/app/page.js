@@ -6,6 +6,7 @@ import { Faq } from "./components/Faq";
 import { Hero } from "./components/Hero";
 import { Instagram } from "./components/Instagram";
 import { LatestNews } from "./components/LatestNews";
+import { OfferAndTopSellingGroup } from "./components/OfferAndTopSellingGroup";
 import { OfferProducts } from "./components/OfferProducts";
 import { OurCustomerSays } from "./components/OurCusterSays";
 import { OurTrendingBrands } from "./components/OurTrendingBrands";
@@ -25,11 +26,7 @@ export default function Home() {
       <TrendingCategories />
       <Banners />
       <Sale />
-      <WidthWrapper className="flex gap-5">
-        <OfferProducts />
-        <TopSellingProducts />
-        <BannerFive />
-      </WidthWrapper>
+      <OfferAndTopSellingGroup />
       <OurTrendingBrands />
       <Faq />
       <LatestNews />

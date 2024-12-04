@@ -15,12 +15,14 @@ export const MainBar = () => {
       <WidthWrapper className="flex justify-center items-center py-6 xl:justify-between xl:py-3">
         <LogoIcon className="min-w-[200px] hidden xl:block" />
         <Menu className="hidden xl:flex" />
-        <div className="flex items-center ">
-          <Menu className="xl:hidden" />
+        <div className="flex flex-col xl:flex-row gap-5 xl:gap-0 items-center ">
+          <Menu className="hidden md:block xl:hidden" />
           <Search />
-          <AccountButton />
-          <WishListButton />
-          <CartButton />
+          <div className="flex ">
+            <AccountButton />
+            <WishListButton />
+            <CartButton />
+          </div>
         </div>
       </WidthWrapper>
     </>

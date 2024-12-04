@@ -1,5 +1,4 @@
 import { Footer } from "./components/Footer";
-import { LoginModal } from "./components/LoginModal";
 import { MainBar } from "./components/MainBar";
 import { Providers } from "./components/Providers";
 import { ThirdBar } from "./components/ThirdBar";
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
       <body className={`${outfit.className} flex flex-col min-h-[100dvh]`}>
         <Providers>
           <TopBar />
-
           <MainBar />
           <ThirdBar />
           {children}

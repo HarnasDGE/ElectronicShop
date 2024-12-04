@@ -1,50 +1,83 @@
+"use client";
 import Image from "next/image";
 import { getProductById } from "../api/getProductById";
 import { BestsellerCard } from "./BestsellerCard";
 import { Carousel } from "./Carousel";
-import { WidthWrapper } from "./WidthWrapper";
 import { SpecialProduct } from "./SpecialProduct";
+import { useEffect, useState } from "react";
+import { Button } from "./Button";
+import { getProductsFeatured } from "../api/getProductsFeatured";
+import { GridWrapper } from "./GridWrapper";
+import { getProductsBestsellers } from "../api/getProductsBestsellers";
+import { getProductsOnSale } from "../api/getProductsOnSale";
 
 export const PopularProducts = () => {
-  const product = getProductById(1);
+  const [activeTabId, setActiveTabId] = useState("all-popular-products");
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const loadProducts = () => {
+      switch (activeTabId) {
+        case "all-popular-products":
+          setProducts([getProductById(1), getProductById(2)]);
+          return;
+        case "featured":
+          const featuredProduts = getProductsFeatured();
+          setProducts(featuredProduts);
+          return;
+        case "bestsellers":
+          const bestsellers = getProductsBestsellers();
+          setProducts(bestsellers);
+          return;
+        case "on-sale":
+          const productsOnSale = getProductsOnSale();
+          setProducts(productsOnSale);
+          return;
+      }
+    };
+    loadProducts();
+  }, [activeTabId]);
   const specialProduct = getProductById(4);
 
-  const isActive = 0;
   const categories = [
     {
-      id: 0,
+      id: "all-popular-products",
       name: "All Products",
     },
     {
-      id: 1,
+      id: "featured",
       name: "Featured",
       image: "/images/icons/featured.png",
     },
     {
-      id: 2,
+      id: "bestsellers",
       name: "Bestsellers",
       image: "/images/icons/bestsellers.png",
     },
     {
-      id: 3,
+      id: "on-sale",
       name: "On Sale",
       image: "/images/icons/onSale.png",
     },
   ];
+
   return (
-    <WidthWrapper className="flex gap-4 py-5 w-full ">
+    <GridWrapper>
       <SpecialProduct product={specialProduct} />
-      <div className="w-[75%] ">
-        <div className="py-4 border-b-[1px] mb-5 flex items-center justify-between">
+      <div className="z ">
+        <div className="py-4 border-b-[1px] mb-5 flex flex-col xl:flex-row gap-4 items-center justify-between">
           <h2>Popular Products</h2>
           <ul className="flex gap-5">
             {categories.map((cat) => {
+              const isActive = activeTabId === cat.id;
               return (
-                <li
+                <Button
+                  color="none"
                   key={cat.name}
-                  className={`flex uppercase whitespace-nowrap items-center gap-2 py-1 px-4 rounded-full border-2 border-solid border-gray cursor-pointer ${
-                    isActive === cat.id ? "bg-gray" : "bg-background"
+                  className={`flex uppercase whitespace-nowrap items-center gap-2 py-1 px-4 rounded-full border-2 border-solid border-gray cursor-pointer font-normal ${
+                    isActive ? "bg-gray" : "bg-background"
                   } `}
+                  onClick={() => setActiveTabId(cat.id)}
                 >
                   {cat.image && (
                     <Image
@@ -53,25 +86,19 @@ export const PopularProducts = () => {
                       height={20}
                       alt="Category image"
                     />
-                  )}{" "}
+                  )}
                   {cat.name}
-                </li>
+                </Button>
               );
             })}
           </ul>
         </div>
         <Carousel prefixId="popularProduct">
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
-          <BestsellerCard product={product} />
+          {products.map((product) => (
+            <BestsellerCard key={product.id} product={product} />
+          ))}
         </Carousel>
       </div>
-    </WidthWrapper>
+    </GridWrapper>
   );
 };

@@ -6,6 +6,9 @@ import { getProductById } from "../api/getProductById";
 import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
 import { calculateTimeLeft } from "../utilities/calculateTimeLeft";
+import { PatternBackground } from "./PatternBackground";
+import { GridWrapper } from "./GridWrapper";
+import { Carousel } from "./Carousel";
 
 export const Sale = () => {
   const products = [
@@ -15,7 +18,7 @@ export const Sale = () => {
     getProductById(4),
   ];
 
-  const endDate = new Date("2024-11-13T23:59:59").getTime(); // Ustal datę końcową
+  const endDate = new Date("2024-12-13T23:59:59").getTime(); // Ustal datę końcową
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(endDate));
 
   useEffect(() => {
@@ -27,8 +30,12 @@ export const Sale = () => {
   }, [endDate]);
 
   return (
-    <WidthWrapper className="flex gap-5">
-      <div className="w-fit flex flex-col justify-center items-center bg-bannerPrimarySale rounded-xl text-center px-10">
+    <GridWrapper>
+      <div className="relative z-0 w-fit flex flex-col justify-center items-center bg-bannerPrimarySale rounded-xl text-center px-10">
+        <PatternBackground
+          src="/images/patterns/hexellence.png"
+          className="-z-20"
+        />
         <h2>BIGGEST FRIDAY SALE</h2>
         <p>
           There are many variations of passages of Lorem Ipsum available
@@ -67,13 +74,13 @@ export const Sale = () => {
           Shop Now <ArrowRightIcon />
         </Button>
       </div>
-      <div className="w-3/4 flex gap-5">
+      <Carousel>
         {products.map((product, index) => {
           return (
             <ProductCard key={`${product.id} - ${index}`} product={product} />
           );
         })}
-      </div>
-    </WidthWrapper>
+      </Carousel>
+    </GridWrapper>
   );
 };

@@ -2,10 +2,13 @@ import { WidthWrapper } from "./WidthWrapper";
 
 import ArrowIcon from "../assets/icons/arrowDown.svg";
 import { Button } from "./Button";
+import { PatternBackground } from "./PatternBackground";
 
 export const CtaSecondary = () => {
   return (
-    <div className=" bg-ctaSecondary py-10">
+    <div className="relative bg-ctaSecondary py-10">
+      <PatternBackground src="/images/patterns/pattern3.png" />
+
       <WidthWrapper className="flex items-center justify-center gap-8 bg-ctaSecondary text-mainText rounded py-5">
         <h2 className="font-normal text-4xl">
           Exquisite Electrical Solutions for Discerning Perfection, Engineered

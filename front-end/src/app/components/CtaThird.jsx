@@ -2,10 +2,12 @@ import Image from "next/image";
 import { WidthWrapper } from "./WidthWrapper";
 import { Button } from "./Button";
 import Link from "next/link";
+import { PatternBackground } from "./PatternBackground";
 
 export const CtaThird = () => {
   return (
-    <div className="bg-ctaSecondary text-mainText py-8 ">
+    <div className="relative bg-ctaSecondary text-mainText py-8 z-0 ">
+      <PatternBackground src="/images/patterns/pattern3.png" />
       <WidthWrapper className="flex justify-between items-center">
         <div className="flex gap-7">
           <Image
