@@ -1,23 +1,55 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "./Button";
-import "../styles/FilterByPrice.css"; // Dodaj stylowanie dla slidera
+import "../styles/FilterByPrice.css";
 
 export const FilterByPrice = () => {
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(10000);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const initialMin = parseInt(searchParams.get("min") || "0", 10);
+  const initialMax = parseInt(searchParams.get("max") || "10000", 10);
+
+  const [minPrice, setMinPrice] = useState(initialMin);
+  const [maxPrice, setMaxPrice] = useState(initialMax);
+
+  useEffect(() => {
+    setMinPrice(initialMin);
+    setMaxPrice(initialMax);
+  }, [initialMin, initialMax]);
 
   const handleSliderChange = (e) => {
     const { name, value } = e.target;
+    const val = parseInt(value, 10);
     if (name === "min") {
-      if (parseInt(value) <= maxPrice) {
-        setMinPrice(parseInt(value));
+      if (val <= maxPrice) {
+        setMinPrice(val);
       }
     } else {
-      if (parseInt(value) >= minPrice) {
-        setMaxPrice(parseInt(value));
+      if (val >= minPrice) {
+        setMaxPrice(val);
       }
     }
+  };
+
+  const handleFilter = () => {
+    const newParams = new URLSearchParams(searchParams);
+
+    if (minPrice > 0) {
+      newParams.set("min", minPrice);
+    } else {
+      newParams.delete("min");
+    }
+
+    if (maxPrice < 10000) {
+      newParams.set("max", maxPrice);
+    } else {
+      newParams.delete("max");
+    }
+
+    router.push(`/products?${newParams.toString()}`);
   };
 
   return (
@@ -56,7 +88,9 @@ export const FilterByPrice = () => {
           <p>
             Price: ${minPrice} - ${maxPrice}
           </p>
-          <Button color="black">Filter</Button>
+          <Button color="black" onClick={handleFilter}>
+            Filter
+          </Button>
         </div>
       </form>
     </div>

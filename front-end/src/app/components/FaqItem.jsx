@@ -19,7 +19,7 @@ export const FaqItem = ({ question, answer }) => {
       onClick={toggleQuestion}
     >
       <div className="flex items-center justify-between transition-all">
-        <h3 className="">{question}</h3>
+        <h4 className="">{question}</h4>
         <p className={`text-2xl `}>+</p>
       </div>
 

@@ -6,11 +6,11 @@ export const ProductCapacities = ({ group, selectedCapacity }) => {
 
   return (
     <div className="pt-5">
-      <div className="flex gap-4 items-center">
+      <div className="flex flex-wrap gap-4 items-center">
         <p>
           Capacity: <span className="font-bold">{selectedCapacity}</span>
         </p>
-        <ul className="flex gap-2">
+        <ul className="flex flex-wrap gap-2">
           {availableCapacities.map((capacity) => {
             const productId = group.find(
               (product) => product.capacity === capacity
@@ -19,12 +19,11 @@ export const ProductCapacities = ({ group, selectedCapacity }) => {
             return (
               <li key={capacity}>
                 <Link
-                  className={`border-4 py-1 px-3 text-gray ${
+                  className={`border-2 py-1 px-3 text-gray ${
                     capacity === selectedCapacity ? "text-secondText" : ""
                   }`}
                   href={`/product/${productId}`}
                 >
-                  {" "}
                   {capacity}
                 </Link>
               </li>

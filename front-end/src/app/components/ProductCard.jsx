@@ -60,11 +60,13 @@ export const ProductCard = ({ product, buttonShown = true }) => {
         onTouchMove={handleTouchMove}
       >
         {product.images.map((image, index) => (
-          <img
+          <Image
             key={`productImage-${product.id}-${index}`}
             src={image}
             alt={product.name}
-            className={`w-full object-cover rounded-lg transition-transform duration-700 ease-in-out transform ${
+            width={300}
+            height={300}
+            className={`w-full object-cover  rounded-lg transition-transform duration-700 ease-in-out transform ${
               index === currentImageIndex
                 ? "translate-x-0"
                 : "translate-x-full hidden"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./Button";
 
 export const ProductSmallCard = ({ product }) => {
@@ -8,13 +9,16 @@ export const ProductSmallCard = ({ product }) => {
         )
       : null;
   return (
-    <div className="bg-backgroundProductPrimary py-7 px-5 flex gap-5 justify-between transition-all duration-300 group hover:bg-hoveredProdcutSecondary">
+    <Link
+      href={`/product/${product.id}`}
+      className="bg-backgroundProductPrimary py-7 px-5 flex gap-5 justify-between transition-all duration-300 group hover:bg-hoveredProdcutSecondary"
+    >
       <div
         className="w-1/3 bg-center bg-contain bg-no-repeat  "
         style={{ backgroundImage: `url(${product.images[0]})` }}
       ></div>
       <div>
-        <h3>{product.name}</h3>
+        <h3 className="text-2xl ">{product.name}</h3>
         <div className="flex justify-between">
           <div className="flex gap-5 items-center">
             <p className="text-specialPriceSecondary text-xl font-bold ">
@@ -31,9 +35,6 @@ export const ProductSmallCard = ({ product }) => {
           </Button>
         </div>
       </div>
-      <div className="bg-procentOff w-10 flex justify-center items-center h-fit rounded-full text-mainText aspect-square transition-all duration-300 group-hover:hidden">
-        {discountPercentage}%
-      </div>
-    </div>
+    </Link>
   );
 };

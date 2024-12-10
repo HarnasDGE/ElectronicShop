@@ -29,7 +29,7 @@ export const Instagram = () => {
         />
       ))}
 
-      <div className="absolute top-1/2 left-1/2 p-4 rounded-full bg-background">
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 p-4 rounded-full bg-background/70">
         <InstagramIcon />
       </div>
     </ul>

@@ -9,7 +9,7 @@ export const ProductKeyFeatures = ({ features }) => (
           height={20}
           alt="Apply Icon"
         />
-        {key}
+        <p className="p-0">{key}</p>
       </li>
     ))}
   </ul>

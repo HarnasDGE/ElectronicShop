@@ -11,9 +11,9 @@ import StarIcon from "../assets/icons/starSecond.svg";
 
 export const ProductDetails = ({ product, group, reviews }) => {
   return (
-    <div className="w-1/2">
-      <h2 className="pt-4 leading-4">{product.name}</h2>
-      <div className="flex justify-between w-1/2 items-center py-5">
+    <div>
+      <h2 className="pt-4 ">{product.name}</h2>
+      <div className="flex justify-between w-full md:w-1/2 items-center py-5">
         <div className="flex gap-1 items-center">
           {Array.from({ length: reviews.stars }).map((_, index) => (
             <StarIcon key={`${product.id}-star-${index}`} />

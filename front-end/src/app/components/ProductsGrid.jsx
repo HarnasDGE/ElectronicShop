@@ -29,6 +29,9 @@ export const ProductsGrid = ({ products }) => {
 
   return (
     <div>
+      {products.length < 1 && (
+        <p>Products not found, change your search criteria.</p>
+      )}
       <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
         {currentProducts.map((product) => (
           <ProductCard key={product.id} product={product} buttonShown={false} />

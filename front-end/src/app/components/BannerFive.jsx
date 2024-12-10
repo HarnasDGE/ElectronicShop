@@ -1,21 +1,27 @@
 import { Button } from "./Button";
 import ViessmannIcon from "../assets/images/viessmann.svg";
+import Image from "next/image";
+import { PatternBackground } from "./PatternBackground";
 
 export const BannerFive = () => {
   return (
-    <li className="relative w-1/3 min-h-full p-8 rounded-xl flex flex-col justify-between overflow-hidden bg-bannerFifth">
-      <div className="flex-grow p-4 rounded relative flex flex-col items-center">
-        <ViessmannIcon />
+    <li className="relative w-full h-full max-h-[800px]  rounded-xl flex flex-col justify-between overflow-hidden bg-bannerFifth">
+      <PatternBackground src="/images/patterns/diagonal-striped-brick.png" />
+      <div className="flex-grow p-8 rounded relative flex flex-col items-center">
+        <ViessmannIcon className="h-full" />
         <p className="text-4xl">SPRINT RUNNING</p>
         <h3 className="text-xl">Smart Watches</h3>
         {/* Zamieniono komponent Image na div z tłem */}
-        <div
-          className="flex-grow w-full aspect-square bg-cover bg-center mt-4 "
-          style={{ backgroundImage: "url('/images/banners/smartwatches.png')" }}
-        ></div>
+        <Image
+          src="/images/banners/smartwatches.png"
+          width={300}
+          height={300}
+          className="h-full w-auto "
+          alt="smartwatches"
+        />
         <p>Live Sale on 25th Sep</p>
-        <div className="whitespace-nowrap">
-          Stainless Steel Design |{" "}
+        <div className="xl:whitespace-nowrap">
+          Stainless Steel Design |
           <span className="font-bold">Bluetooth Calling</span> | 466*466 Px
           Resolution
         </div>
@@ -23,8 +29,8 @@ export const BannerFive = () => {
           <p className="text-xl font-bold">From $850.00</p>
           <p className="line-through">$950.00</p>
         </div>
+        <Button className="mt-auto relative z-10">Shop Now</Button>
       </div>
-      <Button className="mt-auto relative z-10">Shop Now</Button>
     </li>
   );
 };

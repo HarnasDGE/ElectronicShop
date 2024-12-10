@@ -5,14 +5,13 @@ import { HelpLinks } from "./HelpLinks";
 import { KnowUsLinks } from "./KnowUsLinks";
 import { LegalLinks } from "./LegalLinks";
 import { BuyerLinks } from "./BuyerLinks";
-import { PaymentIcons } from "./PaymentIcons";
 import { FooterBottom } from "./FooterBottom";
 import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="bg-backgroundFooter">
-      <WidthWrapper className="flex flex-col xl:flex-row gap-5 pt-14 justify-between">
+    <div className="bg-backgroundFooter xl:pt-8">
+      <WidthWrapper className="flex flex-col p-3 xl:p-0 xl:flex-row gap-5 pt-14 justify-between">
         <div>
           <Image
             src="/images/logo/Logo.svg"

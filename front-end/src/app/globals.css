@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,28 +18,45 @@ li {
 }
 
 h1 {
-  @apply text-5xl font-extrabold;
+  font-size: clamp(2rem, 5vw, 4.5rem); /* Min: 40px, Max: 72px */
+  @apply font-extrabold;
 }
 
 h2 {
-  @apply text-3xl font-extrabold;
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Min: 32px, Max: 56px */
+  @apply font-extrabold;
 }
 
 h3 {
-  @apply text-2xl font-bold;
+  font-size: clamp(1.75rem, 4vw, 3rem); /* Min: 28px, Max: 48px */
+  @apply font-bold;
+}
+
+h4 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* Min: 24px, Max: 40px */
+  @apply font-normal;
 }
 
 h5 {
-  @apply text-2xl font-bold;
-}
-h4 {
-  @apply text-2xl;
+  font-size: clamp(1.25rem, 3vw, 2rem); /* Min: 20px, Max: 32px */
+  @apply font-bold;
 }
 
 h6 {
-  @apply text-xl font-bold;
+  font-size: clamp(1rem, 2.5vw, 1.75rem); /* Min: 16px, Max: 28px */
+  @apply font-bold;
 }
 
 p {
+  font-size: clamp(0.3rem, 2vw, 1rem); /* Min: 16px, Max: 24px */
   @apply py-3;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Dla Internet Explorera i Edge */
+  scrollbar-width: none; /* Dla Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Dla Chrome, Safari i Opera */
 }

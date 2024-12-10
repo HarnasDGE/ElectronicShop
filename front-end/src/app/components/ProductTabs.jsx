@@ -20,12 +20,12 @@ export const ProductTabs = ({ product, mdxSource }) => {
 
   return (
     <div>
-      <ul className="flex gap-4 py-5">
+      <ul className="flex gap-4 py-5 overflow-x-auto hide-scrollbar">
         {tabs.map((tab) => (
           <li key={tab}>
             <Button
               color={activeTab === tab ? "active" : "gray"}
-              className="rounded-2xl font-normal"
+              className="rounded-2xl font-normal whitespace-nowrap "
               onClick={() => setActiveTab(tab)}
             >
               {tab}

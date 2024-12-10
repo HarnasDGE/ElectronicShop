@@ -29,8 +29,8 @@ export default async function ProductPage({ params }) {
 
   return (
     <div>
-      <SubPageBar title={product.name} />
-      <WidthWrapper className="flex gap-7 pt-20">
+      <SubPageBar title={product.name} className="hidden md:flex" />
+      <WidthWrapper className="grid grid-cols-1 md:grid-cols-2 gap-7 pt-20">
         <ImageGallery images={product.images} />
         <ProductDetails product={product} group={group} reviews={reviews} />
       </WidthWrapper>

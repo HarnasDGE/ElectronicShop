@@ -31,7 +31,7 @@ export const Sale = () => {
 
   return (
     <GridWrapper>
-      <div className="relative z-0 w-fit flex flex-col justify-center items-center bg-bannerPrimarySale rounded-xl text-center px-10">
+      <div className="relative z-0 w-fit flex flex-col justify-center items-center bg-bannerPrimarySale rounded-xl text-center w-full py-5">
         <PatternBackground
           src="/images/patterns/hexellence.png"
           className="-z-20"
@@ -43,31 +43,25 @@ export const Sale = () => {
         </p>
         <div className="flex gap-3 text-center py-10 items-center">
           <div className="p-3 bg-backgroundPrimary flex flex-col justify-center rounded">
-            <div className="text-5xl font-bold leading-10">{timeLeft.days}</div>
-            <span>Days</span>
+            <h2 className="font-bold leading-10">{timeLeft.days}</h2>
+            <p className="p-0">Days</p>
           </div>
           <div className="text-3xl">:</div>
           <div className="p-3 bg-backgroundPrimary flex flex-col justify-center rounded">
-            <div className="text-5xl font-bold leading-10">
-              {timeLeft.hours}
-            </div>
-            <span>Hours</span>
-          </div>
-          <div className="text-3xl">:</div>
-
-          <div className="p-3 bg-backgroundPrimary flex flex-col justify-center rounded">
-            <div className="text-5xl font-bold leading-10">
-              {timeLeft.minutes}
-            </div>
-            <span>Minutes</span>
+            <h2 className=" font-bold leading-10">{timeLeft.hours}</h2>
+            <p className="p-0">Hours</p>
           </div>
           <div className="text-3xl">:</div>
 
           <div className="p-3 bg-backgroundPrimary flex flex-col justify-center rounded">
-            <div className="text-5xl font-bold leading-10">
-              {timeLeft.seconds}
-            </div>
-            <span>Seconds</span>
+            <h2 className=" font-bold leading-10">{timeLeft.minutes}</h2>
+            <p className="p-0">Minutes</p>
+          </div>
+          <div className="text-3xl">:</div>
+
+          <div className="p-3 bg-backgroundPrimary flex flex-col justify-center rounded">
+            <h2 className=" font-bold leading-10">{timeLeft.seconds}</h2>
+            <p className="p-0">Seconds</p>
           </div>
         </div>
         <Button>

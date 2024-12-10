@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import ArrowDownIcon from "../assets/icons/arrowDown.svg";
+import MenuIcon from "../assets/icons/menu.svg";
+import { Button } from "./Button";
 
 export const Menu = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export const Menu = ({ className }) => {
     },
     {
       name: "Catalog",
-      src: "/catalog",
+      src: "/products",
     },
     {
       name: "Track Order",
@@ -36,16 +37,18 @@ export const Menu = ({ className }) => {
   return (
     <div className={`w-full ${className} relative`}>
       {/* Toggle Button for Small Screens */}
-      <button
+      <Button
         onClick={toggleMenu}
-        className="flex items-center gap-3 xl:hidden bg-searchBackground h-full text-secondText px-4 py-[18px] border-r-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        color="none"
+        border={false}
+        className="xl:hidden text-secondText bg-lightGray h-full"
       >
-        All <ArrowDownIcon className="scale-175" />
-      </button>
+        <MenuIcon />
+      </Button>
 
       {/* Dropdown Menu for Small Screens - Positioned Under Button */}
       {isOpen && (
-        <ul className="xl:hidden flex flex-col items-start bg-white shadow-md mt-2 py-4 rounded absolute top-full left-0 w-fit h-auto z-50">
+        <ul className="flex flex-col items-start bg-white shadow-md mt-2 py-4 rounded absolute top-full left-0 w-fit h-auto z-50">
           {menuItems.map((item) => (
             <li
               key={item.name}
@@ -58,7 +61,7 @@ export const Menu = ({ className }) => {
       )}
 
       {/* Regular Menu for Large Screens */}
-      <ul className={`hidden xl:flex items-center gap-16 w-full ${className}`}>
+      <ul className={`hidden xl:flex items-center gap-16 w-full `}>
         {menuItems.map((item) => (
           <li
             key={item.name}

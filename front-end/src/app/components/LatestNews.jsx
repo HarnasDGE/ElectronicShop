@@ -8,7 +8,7 @@ export const LatestNews = () => {
   return (
     <div className="bg-backgroundSecondary py-20">
       <WidthWrapper>
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full flex items-center justify-between pb-3">
           <h2>Latest News & Blog</h2>
           <Button>
             More Blogs <ArrowRightIcon />

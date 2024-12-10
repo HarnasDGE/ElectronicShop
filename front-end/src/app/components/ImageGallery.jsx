@@ -29,7 +29,7 @@ export const ImageGallery = ({ images }) => {
   }, []);
 
   return (
-    <div className="w-1/2 grid grid-cols-5 grid-rows-5 gap-3">
+    <div className="grid grid-cols-5 grid-rows-5 gap-3">
       <div className="relative aspect-square col-span-5 row-span-4">
         <Image
           src={images[selectedImageIndex]}

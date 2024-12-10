@@ -64,10 +64,10 @@ export const PopularProducts = () => {
   return (
     <GridWrapper>
       <SpecialProduct product={specialProduct} />
-      <div className="z ">
-        <div className="py-4 border-b-[1px] mb-5 flex flex-col xl:flex-row gap-4 items-center justify-between">
+      <div className=" ">
+        <div className="py-4 xl:border-b-[1px] mb-5 flex flex-col xl:flex-row gap-4 items-center justify-between ">
           <h2>Popular Products</h2>
-          <ul className="flex gap-5">
+          <ul className="flex gap-5 w-full overflow-x-auto whitespace-nowrap hide-scrollbar">
             {categories.map((cat) => {
               const isActive = activeTabId === cat.id;
               return (

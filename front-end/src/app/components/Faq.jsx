@@ -1,12 +1,13 @@
 "use client";
+import Image from "next/image";
 import { FaqItem } from "./FaqItem";
-import { WidthWrapper } from "./WidthWrapper";
+import { GridWrapper } from "./GridWrapper";
 
 export const Faq = () => {
   return (
-    <WidthWrapper className="flex gap-5">
+    <GridWrapper sidebar="right">
       {/* Lewa strona - Pytania i odpowiedzi */}
-      <div className="min-w-3/4 w-3/4 flex flex-col gap-5">
+      <div className=" flex flex-col gap-5">
         <h2>Frequently asked questions</h2>
         <FaqItem
           question="Bring out your business to the whole world?"
@@ -31,12 +32,13 @@ export const Faq = () => {
       </div>
 
       {/* Prawa strona - Obrazek jako tło */}
-      <div
-        className=" h-auto w-[30%] rounded-xl max-w-[30%] bg-cover bg-center "
-        style={{
-          backgroundImage: "url('/images/faq-image.jpg')",
-        }}
-      ></div>
-    </WidthWrapper>
+      <Image
+        src="/images/faq-image.jpg"
+        height={220}
+        width={220}
+        className="w-full rounded-xl shadow-md hidden xl:block"
+        alt="Faq image"
+      />
+    </GridWrapper>
   );
 };

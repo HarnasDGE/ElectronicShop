@@ -6,12 +6,12 @@ import { Button } from "./Button";
 
 export const CtaPrimary = () => {
   return (
-    <WidthWrapper className="relative z-0 flex items-center justify-center gap-8 bg-ctaPrimary text-mainText rounded py-5">
+    <WidthWrapper className="relative z-0 flex flex-col xl:flex-row items-center justify-center gap-8 bg-ctaPrimary text-mainText rounded p-5">
       <div
         className="absolute top-0 left-0 h-full w-full -z-10 mix-blend-multiply"
         style={{ backgroundImage: "url(/images/patterns/pattern1.jpg)" }}
       />
-      <div className="flex items-end">
+      <div className="flex items-end ml-auto xl:ml-0">
         <div className="flex flex-col ">
           <p className="p-0">UPTO</p>
           <p className="text-[100px] font-extrabold leading-[60px] pt-1">40</p>
@@ -27,7 +27,7 @@ export const CtaPrimary = () => {
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form
         </p>
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-5 items-center justify-center xl:justify-start">
           <AmazonIcon />
           <FlipkartIcon />
         </div>

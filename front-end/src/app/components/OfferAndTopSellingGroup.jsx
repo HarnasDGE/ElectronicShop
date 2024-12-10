@@ -6,7 +6,7 @@ import { TopSellingProducts } from "./TopSellingProducts";
 export const OfferAndTopSellingGroup = () => {
   return (
     <GridWrapper sidebar="right">
-      <div>
+      <div className="flex flex-col xl:flex-row gap-7">
         <OfferProducts />
         <TopSellingProducts />
       </div>

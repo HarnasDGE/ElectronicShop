@@ -8,13 +8,13 @@ export const ProductMeta = ({ product }) => (
     </div>
     <Divider />
     <div className="py-5 flex flex-col gap-2">
-      <p>
+      <p className="p-0">
         SKU: <span className="opacity-70">{product.SKU}</span>
       </p>
-      <p>
+      <p className="p-0">
         Category: <span className="opacity-70">{product.category}</span>
       </p>
-      <p>
+      <p className="p-0">
         Tag: <span className="opacity-70">{product.key_features[0]}</span>
       </p>
     </div>

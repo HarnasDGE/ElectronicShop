@@ -15,7 +15,7 @@ export const Button = ({
     default:
       "text-secondText bg-primary border border-solid border-primary fill-current transition-all hover:bg-secondary hover:border-secondary",
     second:
-      "text-mainText bg-secondary border border-solid border-secondary fill-current transition-all hover:bg-primary hover:text-secondText",
+      "text-mainText bg-secondary border border-solid border-secondary fill-current transition-all hover:bg-primary hover:text-secondText hover:border-primary",
     gray: "text-secondText bg-lightGray font-normal fill-current transition-all hover:bg-gray",
     active:
       "text-mainText bg-secondary font-bold fill-current transition-all hover:bg-gray",
@@ -29,6 +29,7 @@ export const Button = ({
       "py-3 w-fit px-4 inline-flex items-center justify-center text-base font-bold gap-2.5 rounded",
     rounded:
       "p-3 inline-flex items-center justify-center text-base font-bold gap-2.5 rounded-full aspect-square",
+    icon: "p-0 inline-flex items-center justify-center text-base font-bold gap-2.5 rounded-full aspect-square",
   };
 
   const classes = `${buttonTypes[type]} ${buttonColor[color]} ${

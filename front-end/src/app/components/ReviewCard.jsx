@@ -16,13 +16,12 @@ export const ReviewCard = () => {
   const product = getProductById(review.productId);
 
   return (
-    <div className="grid grid-cols-3 gap-4 bg-backgroundSecondary rounded-xl">
+    <div className="grid grid-cols-3 gap-4 bg-backgroundSecondary rounded-xl shadow">
       <Image
         src={product.images[0]}
         height={200}
         width={300}
-        layout="responsive"
-        className="aspect-square"
+        className="h-full aspect-square"
         alt="Product photo"
       />
       <div className="w-[75%] col-span-2 py-12 pl-12">

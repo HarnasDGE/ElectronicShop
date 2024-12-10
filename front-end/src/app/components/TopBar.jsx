@@ -21,7 +21,7 @@ export const TopBar = () => {
   }
 
   return (
-    <div className="bg-primary hidden md:block">
+    <div className="bg-primary whitespace-nowrap">
       <WidthWrapper className="flex justify-center xl:justify-between items-center py-5">
         <ul className="flex text-secondText">
           <li className="flex gap-1 items-center border-secondText border-r-2 border-solid pr-3">
