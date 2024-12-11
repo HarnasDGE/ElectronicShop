@@ -33,12 +33,14 @@ export default function Home() {
     <div className="flex flex-col ">
       <SubPageBar title="Products" />
       <WidthWrapper>
-        <OptionProducts
-          onFilterClick={() =>
-            setSidebarSide((prevState) => (prevState ? false : "LEFT"))
-          }
-          onSidebarSideClick={setSidebarSide}
-        />
+        <Suspense fallback={<div>Loading options...</div>}>
+          <OptionProducts
+            onFilterClick={() =>
+              setSidebarSide((prevState) => (prevState ? false : "LEFT"))
+            }
+            onSidebarSideClick={setSidebarSide}
+          />
+        </Suspense>
       </WidthWrapper>
       {sidebarSide ? (
         <GridWrapper sidebar={sidebarSide} className="py-8 ">
