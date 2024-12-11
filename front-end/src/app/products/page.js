@@ -18,15 +18,15 @@ export default function Home() {
   const [sidebarSide, setSidebarSide] = useState("LEFT");
 
   const Sidebar = () => (
-    <div className="bg-backgroundSidebar rounded-2xl p-10 flex flex-col gap-7">
-      <Suspense fallback={<div>Loading</div>}>
+    <Suspense fallback={<div>Loading</div>}>
+      <div className="bg-backgroundSidebar rounded-2xl p-10 flex flex-col gap-7">
         <EventsSidebar />
         <FilterByCategories />
         <FilterByColors />
         <FilterByPrice />
         <FilterByBrands />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 
   return (
