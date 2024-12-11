@@ -12,6 +12,7 @@ import { products } from "../data/products";
 import { Suspense, useState } from "react"; // Importujemy Suspense
 import { ProductsGrid } from "../components/ProductsGrid";
 import { useSearchParams } from "next/navigation";
+import { EventsSidebar } from "../components/EventsSidebar";
 
 export default function Home() {
   const [sidebarSide, setSidebarSide] = useState("LEFT");
@@ -38,6 +39,7 @@ export default function Home() {
 
   const Sidebar = () => (
     <div className="bg-backgroundSidebar rounded-2xl p-10 flex flex-col gap-7">
+      <EventsSidebar />
       <FilterByCategories />
       <FilterByColors />
       <FilterByPrice />
@@ -46,34 +48,36 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col ">
-      <SubPageBar title="Products" />
-      <WidthWrapper>
-        <OptionProducts
-          onFilterClick={() =>
-            setSidebarSide((prevState) => (prevState ? false : "LEFT"))
-          }
-          onSidebarSideClick={setSidebarSide}
-          productsLength={filteredProducts.length}
-        />
-      </WidthWrapper>
-      {sidebarSide ? (
-        <GridWrapper sidebar={sidebarSide} className="py-8 ">
-          {sidebarSide === "LEFT" && <Sidebar />}
-          <Suspense fallback={<div>Loading...</div>}>
-            <ProductsGrid products={filteredProducts} />
-          </Suspense>
-          {sidebarSide === "RIGHT" && <Sidebar />}
-        </GridWrapper>
-      ) : (
-        <WidthWrapper className="py-5">
-          <Suspense fallback={<div>Loading...</div>}>
-            <ProductsGrid products={filteredProducts} />
-          </Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="flex flex-col ">
+        <SubPageBar title="Products" />
+        <WidthWrapper>
+          <OptionProducts
+            onFilterClick={() =>
+              setSidebarSide((prevState) => (prevState ? false : "LEFT"))
+            }
+            onSidebarSideClick={setSidebarSide}
+            productsLength={filteredProducts.length}
+          />
         </WidthWrapper>
-      )}
+        {sidebarSide ? (
+          <GridWrapper sidebar={sidebarSide} className="py-8 ">
+            {sidebarSide === "LEFT" && <Sidebar />}
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProductsGrid products={filteredProducts} />
+            </Suspense>
+            {sidebarSide === "RIGHT" && <Sidebar />}
+          </GridWrapper>
+        ) : (
+          <WidthWrapper className="py-5">
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProductsGrid products={filteredProducts} />
+            </Suspense>
+          </WidthWrapper>
+        )}
 
-      <CtaSecondary />
-    </div>
+        <CtaSecondary />
+      </div>
+    </Suspense>
   );
 }

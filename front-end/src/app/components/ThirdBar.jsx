@@ -10,14 +10,19 @@ import MenuSecondIcon from "../assets/icons/menuSecond.svg";
 import Link from "next/link";
 import { getProductsCategories } from "../api/getProductsCategories";
 
+const events = [
+  { name: "Today Deals", icon: <DealsIcon /> },
+  { name: "Flash Sale", icon: <LightiningIcon /> },
+  { name: "Buy One Get One", icon: <OfferIcon /> },
+  { name: "Specific Offer", icon: <SpecificOfferIcon /> },
+];
+
 export const ThirdBar = ({ className }) => {
   const categories = getProductsCategories();
   const [visibleCategories, setVisibleCategories] = useState(categories);
 
   useEffect(() => {
     const handleResize = () => {
-      // Zmiana logiki w zależności od rozdzielczości
-      // Jeśli szerokość <= 768px, wyświetlamy wszystkie kategorie w jednej linii
       if (window.innerWidth <= 768) {
         setVisibleCategories(categories);
       } else {
@@ -93,27 +98,15 @@ export const ThirdBar = ({ className }) => {
           </button>
         </ul>
         <ul className="flex gap-3 items-center hidden 2xl:flex">
-          <Link href="/today-deals">
-            <li className="flex items-center gap-2">
-              <DealsIcon /> <p className="underline py-0">Today Deals</p>
-            </li>
-          </Link>
-          <Link href="/flash-sale">
-            <li className="flex items-center gap-2">
-              <LightiningIcon /> <p className="underline py-0">Flash Sale</p>
-            </li>
-          </Link>
-          <Link href="/buy-one-get-one">
-            <li className="flex items-center gap-2">
-              <OfferIcon /> <p className="underline py-0">Buy One Get One</p>
-            </li>
-          </Link>
-          <Link href="/specific-offer">
-            <li className="flex items-center gap-2">
-              <SpecificOfferIcon />{" "}
-              <p className="underline py-0">Specific Offer</p>
-            </li>
-          </Link>
+          {events.map((event) => {
+            return (
+              <Link href={`/products?event=${event.name.toString()}`}>
+                <li className="flex items-center gap-2">
+                  {event.icon} <p className="underline py-0">{event.name}</p>
+                </li>
+              </Link>
+            );
+          })}
         </ul>
       </WidthWrapper>
     </div>
