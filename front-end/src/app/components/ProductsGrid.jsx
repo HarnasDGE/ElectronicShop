@@ -1,4 +1,5 @@
 "use client";
+
 import { useSearchParams, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { ProductCard } from "./ProductCard";
@@ -8,14 +9,42 @@ export const ProductsGrid = ({ products }) => {
   const pathname = usePathname();
   const page = parseInt(searchParams.get("page")) || 1;
   const perPage = parseInt(searchParams.get("perPage")) || 8;
+
+  const type = searchParams.get("type");
+  const color = searchParams.get("color");
+  const brands = searchParams.get("brand")?.split(",") || [];
+  const minPrice = parseInt(searchParams.get("minPrice") || "0", 10);
+  const maxPrice = parseInt(searchParams.get("maxPrice") || "10000", 10);
+  const event = searchParams.get("event"); // Jeśli chcemy też filtrować po event
+
+  const filteredProducts = products.filter((product) => {
+    const matchType = type ? product.category === type : true;
+    const matchColor = color ? product.color === color : true;
+    const matchBrand =
+      brands.length > 0 ? brands.includes(product.brand) : true;
+    const matchPrice = product.price >= minPrice && product.price <= maxPrice;
+    const matchDiscountPrice =
+      product.discount_price >= minPrice && product.discount_price <= maxPrice;
+    // Zakładamy, że "event" może mieć wpływ na filtrowanie:
+    // const matchEvent = event ? product.event === event : true;
+    // Jeśli nie, pomijamy ten warunek:
+    return (
+      matchType &&
+      matchColor &&
+      matchBrand &&
+      matchPrice &&
+      matchDiscountPrice /* && matchEvent */
+    );
+  });
+
   const [currentProducts, setCurrentProducts] = useState([]);
-  const allProductsCount = products.length;
+  const allProductsCount = filteredProducts.length;
 
   useEffect(() => {
     const start = (page - 1) * perPage;
     const end = start + perPage;
-    setCurrentProducts(products.slice(start, end));
-  }, [page, perPage, products]);
+    setCurrentProducts(filteredProducts.slice(start, end));
+  }, [page, perPage, filteredProducts]);
 
   const handlePageChange = (newPage) => {
     const newSearchParams = new URLSearchParams(searchParams);
@@ -29,7 +58,7 @@ export const ProductsGrid = ({ products }) => {
 
   return (
     <div>
-      {products.length < 1 && (
+      {filteredProducts.length < 1 && (
         <p>Products not found, change your search criteria.</p>
       )}
       <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
