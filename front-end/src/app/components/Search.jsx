@@ -1,8 +1,10 @@
 import SearchIcon from "../assets/icons/search.svg";
 
-export const Search = () => {
+export const Search = ({ className }) => {
   return (
-    <form className="bg-searchBackground rounded flex p-2 w-full mr-5 text-sm xl:text-base">
+    <form
+      className={`bg-searchBackground rounded flex  w-full text-sm xl:text-base ${className}`}
+    >
       <input
         type="text"
         placeholder="Search for anything"

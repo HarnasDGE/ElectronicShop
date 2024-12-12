@@ -11,6 +11,8 @@ import { ProductDetails } from "@/app/components/ProductDetails";
 import { CtaSecondary } from "@/app/components/CtaSecondary";
 import { ProductTabs } from "@/app/components/ProductTabs";
 import { RelatedProducts } from "@/app/components/RelatedProducts";
+import { BarAppears } from "@/app/components/BarAppears";
+import { ProductBarAppears } from "@/app/components/ProductBarAppears";
 
 // Ten komponent jest serwerowym komponentem
 export default async function ProductPage({ params }) {
@@ -29,6 +31,7 @@ export default async function ProductPage({ params }) {
 
   return (
     <div>
+      <ProductBarAppears product={product} />
       <SubPageBar title={product.name} className="hidden md:flex" />
       <WidthWrapper className="grid grid-cols-1 md:grid-cols-2 gap-7 pt-20">
         <ImageGallery images={product.images} />

@@ -9,7 +9,7 @@ export const WishListButton = ({ className }) => {
 
   return (
     <Link
-      className={` flex gap-3 border-l-2 px-5 border-secondText group ${className}`}
+      className={` flex gap-3 px-5  border-secondText group ${className}`}
       href="/wishlist"
     >
       <div className="relative">

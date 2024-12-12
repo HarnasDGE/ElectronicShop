@@ -1,32 +1,33 @@
+import Link from "next/link";
 import { AccountButton } from "./AccountButton";
 import { CartButton } from "./CartButton";
+import { Logo } from "./Logo";
 import { Menu } from "./Menu";
 import { Search } from "./Search";
 import { WidthWrapper } from "./WidthWrapper";
 import { WishListButton } from "./WishListButton";
-import LogoIcon from "/public/images/logo/Logo.svg";
 
-export const MainBar = () => {
+export const MainBar = ({ className }) => {
   return (
-    <>
-      <WidthWrapper className="flex justify-center pt-8 pb-3 xl:hidden ">
-        <LogoIcon className="scale-[200%]" />
-      </WidthWrapper>
-      <WidthWrapper className="flex justify-center items-center py-6 xl:justify-between xl:py-3">
-        <LogoIcon className="min-w-[200px] hidden xl:block" />
+    <div
+      className={`bg-background min-h-22 max-h-22 overflow-hidden py-3 z-[9999] ${className} `}
+    >
+      <WidthWrapper className="flex justify-center items-center h-full px-3 xl:px-0 xl:justify-between  overflow-hidden">
+        <Link href="/" className="w-full">
+          <Logo className="min-w-[150px] " />
+        </Link>
         <Menu className="hidden xl:flex" />
-        <div className="flex flex-col xl:flex-row items-center ">
-          <div className="flex gap-1 mx-auto ">
-            <Menu className="xl:hidden" />
+        <div className="flex  items-center ">
+          <div className="flex gap-1 mx-auto">
             <Search />
           </div>
-          <div className="flex pt-6">
-            <AccountButton />
+          <div className="flex pt-2 xl:pt-2 items-center">
             <WishListButton />
             <CartButton />
+            <Menu className="xl:hidden" />
           </div>
         </div>
       </WidthWrapper>
-    </>
+    </div>
   );
 };

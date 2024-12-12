@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-grow">
       <SubPageBar title="Your Cart" />
-      <GridWrapper sidebar="right" className="py-20 flex-grow">
+      <GridWrapper sidebar="right" className="py-20 flex-grow px-2">
         {cart.length === 0 && (
           <div className="flex flex-col justify-center items-center text-center gap-7 flex-grow">
             <CartIcon className="scale-[600%] my-20 " />

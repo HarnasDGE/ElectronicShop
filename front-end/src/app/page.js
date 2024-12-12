@@ -1,5 +1,6 @@
 import { Adventages } from "./components/Adventages";
 import { Banners } from "./components/Banners";
+import { BarAppears } from "./components/BarAppears";
 import { CtaPrimary } from "./components/CtaPrimary";
 import { Faq } from "./components/Faq";
 import { Hero } from "./components/Hero";
@@ -16,6 +17,7 @@ import { TrendingCategories } from "./components/TrendingCategories";
 export default function Home() {
   return (
     <main className="flex flex-col gap-[50px]">
+      <BarAppears />
       <Hero />
       <PopularProducts />
       <CtaPrimary />

@@ -5,10 +5,12 @@ import { SubPageBar } from "../components/SubPageBar";
 import { HowWeWork } from "../components/HowWeWork";
 import { Companies } from "../components/Companies";
 import { Instagram } from "../components/Instagram";
+import { BarAppears } from "../components/BarAppears";
 
 export default function Home() {
   return (
     <main className="flex-grow ">
+      <BarAppears />
       <SubPageBar title="About Us" />
       <WidthWrapper className="flex flex-col gap-20 py-20">
         <Image

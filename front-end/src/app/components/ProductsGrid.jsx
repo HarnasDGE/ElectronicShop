@@ -1,7 +1,6 @@
 "use client";
 
 import { useSearchParams, usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
 import { ProductCard } from "./ProductCard";
 
 export const ProductsGrid = ({ products }) => {
@@ -25,26 +24,17 @@ export const ProductsGrid = ({ products }) => {
     const matchPrice = product.price >= minPrice && product.price <= maxPrice;
     const matchDiscountPrice =
       product.discount_price >= minPrice && product.discount_price <= maxPrice;
-    // Zakładamy, że "event" może mieć wpływ na filtrowanie:
-    // const matchEvent = event ? product.event === event : true;
-    // Jeśli nie, pomijamy ten warunek:
     return (
-      matchType &&
-      matchColor &&
-      matchBrand &&
-      matchPrice &&
-      matchDiscountPrice /* && matchEvent */
+      matchType && matchColor && matchBrand && matchPrice && matchDiscountPrice
     );
   });
 
-  const [currentProducts, setCurrentProducts] = useState([]);
-  const allProductsCount = filteredProducts.length;
+  // Zamiast użycia setCurrentProducts w useEffect, obliczamy produkty tutaj
+  const start = (page - 1) * perPage;
+  const end = start + perPage;
+  const currentProducts = filteredProducts.slice(start, end); // <-- zmiana tutaj
 
-  useEffect(() => {
-    const start = (page - 1) * perPage;
-    const end = start + perPage;
-    setCurrentProducts(filteredProducts.slice(start, end));
-  }, [page, perPage, filteredProducts]);
+  const allProductsCount = filteredProducts.length;
 
   const handlePageChange = (newPage) => {
     const newSearchParams = new URLSearchParams(searchParams);

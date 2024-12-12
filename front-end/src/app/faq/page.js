@@ -1,3 +1,4 @@
+import { BarAppears } from "../components/BarAppears";
 import { CtaPrimary } from "../components/CtaPrimary";
 import { FaqItem } from "../components/FaqItem";
 import { SubPageBar } from "../components/SubPageBar";
@@ -6,6 +7,7 @@ import { WidthWrapper } from "../components/WidthWrapper";
 export default function Faq() {
   return (
     <main className="flex-grow ">
+      <BarAppears />
       <SubPageBar title="FAQ" />
       <WidthWrapper className="pt-10 flex flex-col gap-10 text-center">
         <div className="grid gap-4">

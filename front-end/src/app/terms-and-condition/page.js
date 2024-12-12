@@ -1,3 +1,4 @@
+import { BarAppears } from "../components/BarAppears";
 import { CtaThird } from "../components/CtaThird";
 import { SubPageBar } from "../components/SubPageBar";
 import { WidthWrapper } from "../components/WidthWrapper";
@@ -6,6 +7,7 @@ import termsData from "../data/termsData.json";
 export default function Home() {
   return (
     <main className="flex-grow">
+      <BarAppears />
       <SubPageBar title="Terms And Condition" />
       <WidthWrapper className="py-20">
         <h2>Introduction</h2>

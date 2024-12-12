@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { WidthWrapper } from "./WidthWrapper";
-import MenuIcon from "../assets/icons/menu.svg";
 import DealsIcon from "../assets/icons/deals.svg";
 import LightiningIcon from "../assets/icons/lightining.svg";
 import OfferIcon from "../assets/icons/offer.svg";
@@ -100,7 +99,10 @@ export const ThirdBar = ({ className }) => {
         <ul className="flex gap-3 items-center hidden 2xl:flex">
           {events.map((event) => {
             return (
-              <Link href={`/products?event=${event.name.toString()}`}>
+              <Link
+                href={`/products?event=${event.name.toString()}`}
+                key={event.name}
+              >
                 <li className="flex items-center gap-2">
                   {event.icon} <p className="underline py-0">{event.name}</p>
                 </li>

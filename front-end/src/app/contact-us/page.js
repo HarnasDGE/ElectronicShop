@@ -8,6 +8,7 @@ import PhoneIcon from "../assets/icons/phone.svg";
 import { Button } from "../components/Button";
 import Link from "next/link";
 import { CtaThird } from "../components/CtaThird";
+import { BarAppears } from "../components/BarAppears";
 
 export default function Home() {
   const contactItems = [
@@ -34,8 +35,9 @@ export default function Home() {
   ];
   return (
     <main className="flex-grow flex flex-col">
+      <BarAppears />
       <SubPageBar title="Contact Us" />
-      <WidthWrapper className="flex py-20 gap-10 flex-grow">
+      <WidthWrapper className="flex flex-col xl:flex-row py-20 gap-10 flex-grow">
         <div>
           <h2>Reach Out to Us. We're Just a Click Away!</h2>
           <p className="w-3/4 text-gray-600 mt-4">

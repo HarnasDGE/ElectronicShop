@@ -1,3 +1,4 @@
+import { BarAppears } from "../components/BarAppears";
 import { CtaThird } from "../components/CtaThird";
 import { FaqItem } from "../components/FaqItem";
 import { SubPageBar } from "../components/SubPageBar";
@@ -6,6 +7,7 @@ import { WidthWrapper } from "../components/WidthWrapper";
 export default function Home() {
   return (
     <main className="flex-grow">
+      <BarAppears />
       <SubPageBar title="Privacy & Policy" />
       <WidthWrapper className="grid gap-5 py-20">
         <h2>Shipping Policy</h2>

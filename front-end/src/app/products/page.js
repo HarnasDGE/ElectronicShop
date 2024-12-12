@@ -13,6 +13,7 @@ import { products } from "../data/products";
 import { Suspense, useState } from "react";
 import { ProductsGrid } from "../components/ProductsGrid"; // <-- Import ProductsGrid bez filtrowania w tym miejscu
 import { EventsSidebar } from "../components/EventsSidebar";
+import { BarAppears } from "../components/BarAppears";
 
 export default function Home() {
   const [sidebarSide, setSidebarSide] = useState("LEFT");
@@ -31,6 +32,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col ">
+      <BarAppears />
       <SubPageBar title="Products" />
       <WidthWrapper>
         <Suspense fallback={<div>Loading options...</div>}>

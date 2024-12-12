@@ -11,6 +11,7 @@ import { Tags } from "../components/Tags";
 import { InstagramNarrow } from "../components/InstagramNarrow";
 import { BannerFour } from "../components/BannerFour";
 import { PostsGrid } from "../components/PostsGrid";
+import { BarAppears } from "../components/BarAppears";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -25,6 +26,7 @@ export default function Blog() {
 
   return (
     <main className="flex-grow">
+      <BarAppears />
       <SubPageBar title="Blog" />
       <GridWrapper className="py-10">
         <div className="flex flex-col gap-7">
